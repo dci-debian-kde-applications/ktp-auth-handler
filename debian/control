@@ -1,0 +1,37 @@
+Source: ktp-auth-handler
+Section: kde
+Priority: optional
+Maintainer: George Kiagiadakis <kiagiadakis.george@gmail.com>
+Build-Depends: debhelper (>= 9),
+ pkg-kde-tools (>= 0.9),
+ libtelepathy-qt4-dev (>= 0.9.0),
+ kdelibs5-dev (>= 4:4.6),
+ cmake (>= 2.8),
+ libktpcommoninternalsprivate-dev (>= 0.4.0),
+ libqtwebkit-dev,
+ libqjson-dev
+Standards-Version: 3.9.3
+Homepage: https://projects.kde.org/projects/extragear/network/telepathy/ktp-auth-handler
+Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-extras/kde-telepathy/ktp-auth-handler.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/kde-telepathy/ktp-auth-handler.git
+
+Package: kde-telepathy-auth-handler
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: KDE Telepathy authentication handler
+ This package provides a Telepathy handler for the ServerAuthentication
+ and ServerTLSConnection Telepathy channel types, which means that it
+ provides passwords to connection managers (and stores them using KWallet)
+ and also handles SSL certificate errors in encrypted IM connections.
+ .
+ This package is not meant to be used standalone. It is recommended
+ to install the kde-telepathy metapackage instead.
+
+Package: kde-telepathy-auth-handler-dbg
+Architecture: any
+Section: debug
+Priority: extra
+Depends: kde-telepathy-auth-handler (= ${binary:Version}), ${misc:Depends}
+Description: KDE Telepathy authentication handler - debug symbols
+ This package provides the debug symbols for the KDE Telepathy authentication
+ handler module.
