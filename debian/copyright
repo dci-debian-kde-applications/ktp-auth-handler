@@ -1,69 +1,88 @@
-This package was debianized by George Kiagiadakis <kiagiadakis.george@gmail.com> on
-Thu, 01 Dec 2011 00:29:35 +0200.
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: ktp-auth-handler
+Upstream-Contact: KDE Telepathy Project <kde-telepathy@kde.org>
+Source: ftp://ftp.kde.org/pub/kde/unstable/kde-telepathy/
+License: LGPL-2.1+
 
-It was downloaded from:
+Files: *
+Copyright: 2011 Collabora Ltd. <http://www.collabora.co.uk>
+           2011 David Edmundson <kde@davidedmundson.co.uk>
+           2011-2012 Daniele E. Domenichelli <daniele.domenichelli@gmail.com>
+License: LGPL-2.1+
 
-    http://download.kde.org/
+Files: po/*
+Copyright: 2012 Mladen Pejakovic <pejakm@gmail.com>
+           2012 Chusslove Illich <caslav.ilic@gmx.net>
+           2012 Luiz Fernando Ranghetti <elchevive@opensuse.org>
+           2011 Kevin Scannell <kscanne@gmail.com>
+           2012 Richard Frič <Richard.Fric@kdemail.net>
+           2012 Kristóf Kiszel <ulysses@kubuntu.org>
+           2011 André Marcelo Alvarenga <andrealvarenga@gmx.net>
+           2011-2012 Pino Toscano <toscano.pino@tiscali.it>
+           2011-2012 Yuri Chornoivan <yurchor@ukr.net>
+           2012 Josep Ma. Ferrer <txemaq@gmail.com>
+           2011-2012 Frederik Schwarzer <schwarzer@kde.org>
+           2011 Manfred Wiese <m.j.wiese@web.de>
+           2012 Franklin Weng <franklin@mail.everfocus.com.tw>
+           2011-2012 Stefan Asserhall <stefan.asserhall@comhem.se>
+           2012 Freek de Kruijf <freekdekruijf@kde.nl>
+           2011-2012 Kira J. Fernández <kirajfdez@gmail.com>
+           2012 Marek Laane <bald@smail.ee>
+           2011 Vít Pelčák <vit@pelcak.org>
+           2012 Bjørn Steensrud <bjornst@skogkatt.homelinux.org>
+           2012 Tommi Nieminen <translator@legisign.org>
+           2012 Stelios <sstavra@gmail.com>
+           2012 Burkhard Lück <lueck@hube-lueck.de>
+           2012 Ni Hui <shuizhuyuanluo@126.com>
+           2011-2012 Martin Schlander <mschlander@opensuse.org>
+           2012 Xosé <xosecalvo@gmail.com>
+           2012 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+License: LGPL-2.1+
 
-Upstream Author:
+Files: cmake/*
+Copyright: 2011 Dario Freddi <drf@kde.org>
+License: BSD-3-clause
+    Redistribution and use in source and binary forms, with or without
+    modification, are permitted provided that the following conditions
+    are met:
+    .
+    1. Redistributions of source code must retain the copyright
+    notice, this list of conditions and the following disclaimer.
+    2. Redistributions in binary form must reproduce the copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+    3. The name of the author may not be used to endorse or promote products
+    derived from this software without specific prior written permission.
+    .
+    THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+    IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+    OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+    IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+    INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+    NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+    DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+    THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+    (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+    THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-    Andre Moreira Magalhaes <andre.magalhaes@collabora.co.uk>
-    David Edmundson <kde@davidedmundson.co.uk>
+Files: debian/*
+Copyright: 2011-2012 George Kiagiadakis <kiagiadakis.george@gmail.com>
+License: LGPL-2.1+
 
-Copyright:
-
-    © 2011 Collabora Ltd. <http://www.collabora.co.uk>
-    © 2011 David Edmundson <kde@davidedmundson.co.uk>
-
-License:
-
-    This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU Lesser General Public License as published
-    by the Free Software Foundation; either version 2.1 of the License, or
-    (at your option) any later version.
-
-    This package is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Lesser General Public License for more details.
-
-    On Debian systems, the full text of the GNU Lesser General Public License
-    version 2.1 is available in /usr/share/common-licenses/LGPL-2.1.
-
-Files with different license and/or copyright:
-
-  Files under cmake/
-
-    Copyright: © 2008, Allen Winter <winter@kde.org>
-    Copyright: © 2009, Andre Moreira Magalhaes <andrunko@gmail.com>
-
-    These files are under this license:
-
-    | Redistribution and use in source and binary forms, with or without
-    | modification, are permitted provided that the following conditions
-    | are met:
-    |
-    | 1. Redistributions of source code must retain the copyright
-    |    notice, this list of conditions and the following disclaimer.
-    | 2. Redistributions in binary form must reproduce the copyright
-    |    notice, this list of conditions and the following disclaimer in the
-    |    documentation and/or other materials provided with the distribution.
-    | 3. The name of the author may not be used to endorse or promote products
-    |    derived from this software without specific prior written permission.
-    |
-    | THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-    | IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-    | OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-    | IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-    | INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-    | NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-    | DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-    | THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-    | (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-    | THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-The Debian packaging is
-
-    © 2011, George Kiagiadakis <kiagiadakis.george@gmail.com>
-
-and is licensed under the LGPL v2.1 or later, see `/usr/share/common-licenses/LGPL-2.1'.
+License: LGPL-2.1+
+   This library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+   .
+   This library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+   .
+   You should have received a copy of the GNU Lesser General Public
+   License along with this library; if not, write to the Free Software
+   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+   .
+   On Debian systems, the complete text of the GNU Lesser General
+   Public License v2.1 can be found in `/usr/share/common-licenses/LGPL-2.1'.
