@@ -18,7 +18,7 @@ Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/kde-telepath
 
 Package: kde-telepathy-auth-handler
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, kde-telepathy-data (>= 0.4)
 Recommends: kde-telepathy
 Description: KDE Telepathy authentication handler
  This package provides a Telepathy handler for the ServerAuthentication
