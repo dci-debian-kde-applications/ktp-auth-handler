@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-05-21 03:54+0200\n"
+"POT-Creation-Date: 2012-08-28 20:46+0200\n"
 "PO-Revision-Date: 2012-01-22 15:00+0800\n"
 "Last-Translator: Ni Hui <shuizhuyuanluo@126.com>\n"
 "Language-Team: Chinese Simplified <kde-china@kde.org>\n"
@@ -16,6 +16,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 1.4\n"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "KDE 中国"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kde-china@kde.org"
 
 #: main.cpp:47
 msgid "Telepathy Authentication Handler"
@@ -33,46 +41,32 @@ msgstr "开发者"
 msgid "Daniele E. Domenichelli"
 msgstr "Daniele E. Domenichelli"
 
-#: x-telepathy-password-auth-operation.cpp:82
-#: x-messenger-oauth2-auth-operation.cpp:104
+#: x-messenger-oauth2-auth-operation.cpp:106
+#: x-telepathy-password-auth-operation.cpp:84
 msgid "Authentication error"
 msgstr "验证错误"
 
-#: x-telepathy-password-auth-operation.cpp:106
-#: x-messenger-oauth2-auth-operation.cpp:119
+#: x-messenger-oauth2-auth-operation.cpp:121
+#: x-telepathy-password-auth-operation.cpp:108
 msgid "User cancelled auth"
 msgstr ""
 
-#: rc.cpp:1
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "KDE 中国"
-
-#: rc.cpp:2
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "kde-china@kde.org"
-
-#. i18n: file: x-telepathy-password-prompt.ui:45
 #. i18n: ectx: property (text), widget (KTitleWidget, title)
-#: rc.cpp:5
+#: x-telepathy-password-prompt.ui:45
 msgid "Please Enter Your Account Password"
 msgstr "请输入您的账户密码"
 
-#. i18n: file: x-telepathy-password-prompt.ui:57
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:8
+#: x-telepathy-password-prompt.ui:57
 msgid "Account:"
 msgstr "账户："
 
-#. i18n: file: x-telepathy-password-prompt.ui:71
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:11
+#: x-telepathy-password-prompt.ui:71
 msgid "Password:"
 msgstr "密码："
 
-#. i18n: file: x-telepathy-password-prompt.ui:85
 #. i18n: ectx: property (text), widget (QCheckBox, savePassword)
-#: rc.cpp:14
+#: x-telepathy-password-prompt.ui:85
 msgid "Save Password"
 msgstr "保存密码"
