@@ -1,25 +1,33 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Vít Pelčák <vit@pelcak.org>, 2011.
+# Vít Pelčák <vit@pelcak.org>, 2011, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-05-21 03:54+0200\n"
-"PO-Revision-Date: 2011-10-26 10:23+0200\n"
-"Last-Translator: Vít Pelčák <vit@pelcak.org>\n"
+"POT-Creation-Date: 2012-08-28 20:46+0200\n"
+"PO-Revision-Date: 2012-07-31 14:08+0200\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
-"Language: \n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 1.4\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Vít Pelčák, Tomáš Chvátal"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "vit@pelcak.org, tomas.chvatal@gmail.com"
 
 #: main.cpp:47
 msgid "Telepathy Authentication Handler"
-msgstr ""
+msgstr "Správce ověření Telepathy"
 
 #: main.cpp:49
 msgid "David Edmundson"
@@ -31,48 +39,34 @@ msgstr "Vývojář"
 
 #: main.cpp:50
 msgid "Daniele E. Domenichelli"
-msgstr ""
+msgstr "Daniele E. Domenichelli"
 
-#: x-telepathy-password-auth-operation.cpp:82
-#: x-messenger-oauth2-auth-operation.cpp:104
+#: x-messenger-oauth2-auth-operation.cpp:106
+#: x-telepathy-password-auth-operation.cpp:84
 msgid "Authentication error"
 msgstr "Chyba ověření"
 
-#: x-telepathy-password-auth-operation.cpp:106
-#: x-messenger-oauth2-auth-operation.cpp:119
+#: x-messenger-oauth2-auth-operation.cpp:121
+#: x-telepathy-password-auth-operation.cpp:108
 msgid "User cancelled auth"
-msgstr ""
+msgstr "Uživatelem přerušené ověření"
 
-#: rc.cpp:1
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Vít Pelčák"
-
-#: rc.cpp:2
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "vit@pelcak.org"
-
-#. i18n: file: x-telepathy-password-prompt.ui:45
 #. i18n: ectx: property (text), widget (KTitleWidget, title)
-#: rc.cpp:5
+#: x-telepathy-password-prompt.ui:45
 msgid "Please Enter Your Account Password"
 msgstr "Prosím zadejte heslo k Vašemu účtu"
 
-#. i18n: file: x-telepathy-password-prompt.ui:57
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:8
+#: x-telepathy-password-prompt.ui:57
 msgid "Account:"
 msgstr "Účet:"
 
-#. i18n: file: x-telepathy-password-prompt.ui:71
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:11
+#: x-telepathy-password-prompt.ui:71
 msgid "Password:"
 msgstr "Heslo:"
 
-#. i18n: file: x-telepathy-password-prompt.ui:85
 #. i18n: ectx: property (text), widget (QCheckBox, savePassword)
-#: rc.cpp:14
+#: x-telepathy-password-prompt.ui:85
 msgid "Save Password"
 msgstr "Uložit heslo"
