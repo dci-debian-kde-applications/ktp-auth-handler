@@ -1,8 +1,10 @@
 # Copyright © 2012 This_file_is_part_of_KDE
 # This file is distributed under the same license as the ktp-auth-handler package.
 # Tommi Nieminen <translator@legisign.org>, 2012.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2013.
 #
-# KDE 4.9 Finnish translation sprint 2012-06/07
+# KDE Finnish translation sprint participants:
+# Author: Artnay
 msgid ""
 msgstr ""
 "Project-Id-Version: ktp-auth-handler\n"
@@ -16,8 +18,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-POT-Import-Date: 2012-06-15 07:10:32+0000\n"
-"X-Generator: MediaWiki 1.20alpha (r113129); Translate 2012-07-04\n"
+"X-POT-Import-Date: 2013-01-13 20:43:16+0000\n"
+"X-Generator: Lokalize 1.5\n"
 
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"

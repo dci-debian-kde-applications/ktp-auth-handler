@@ -1,34 +1,34 @@
+# translation of ktp-auth-handler.po to Français
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Vít Pelčák <vit@pelcak.org>, 2011, 2012, 2013.
-# Tomáš Chvátal <tomas.chvatal@gmail.com>, 2012, 2013.
+# Joëlle Cornavin <jcorn@free.fr>, 2012, 2013.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: ktp-auth-handler\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2012-08-28 20:46+0200\n"
-"PO-Revision-Date: 2013-02-06 11:25+0100\n"
-"Last-Translator: Tomáš Chvátal <tomas.chvatal@gmail.com>\n"
-"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
-"Language: cs\n"
+"PO-Revision-Date: 2012-07-10 10:19+0200\n"
+"Last-Translator: Joëlle Cornavin <jcorn@free.fr>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 1.4\n"
 
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Vít Pelčák, Tomáš Chvátal"
+msgstr "Joëlle Cornavin"
 
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "vit@pelcak.org, tomas.chvatal@gmail.com"
+msgstr "jcorn@free.fr"
 
 #: main.cpp:47
 msgid "Telepathy Authentication Handler"
-msgstr "Správce ověření Telepathy"
+msgstr "Gestionnaire d'authentification de Telepathy"
 
 #: main.cpp:49
 msgid "David Edmundson"
@@ -36,7 +36,7 @@ msgstr "David Edmundson"
 
 #: main.cpp:49 main.cpp:50
 msgid "Developer"
-msgstr "Vývojář"
+msgstr "Développeur"
 
 #: main.cpp:50
 msgid "Daniele E. Domenichelli"
@@ -45,29 +45,29 @@ msgstr "Daniele E. Domenichelli"
 #: x-messenger-oauth2-auth-operation.cpp:106
 #: x-telepathy-password-auth-operation.cpp:84
 msgid "Authentication error"
-msgstr "Chyba ověření"
+msgstr "Erreur d'authentification"
 
 #: x-messenger-oauth2-auth-operation.cpp:121
 #: x-telepathy-password-auth-operation.cpp:108
 msgid "User cancelled auth"
-msgstr "Uživatelem přerušené ověření"
+msgstr "L'utilisateur a annulé l'authentification"
 
 #. i18n: ectx: property (text), widget (KTitleWidget, title)
 #: x-telepathy-password-prompt.ui:45
 msgid "Please Enter Your Account Password"
-msgstr "Prosím zadejte heslo k vašemu účtu"
+msgstr "Veuillez saisir le mot de passe de votre compte"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: x-telepathy-password-prompt.ui:57
 msgid "Account:"
-msgstr "Účet:"
+msgstr "Compte :"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: x-telepathy-password-prompt.ui:71
 msgid "Password:"
-msgstr "Heslo:"
+msgstr "Mot de passe :"
 
 #. i18n: ectx: property (text), widget (QCheckBox, savePassword)
 #: x-telepathy-password-prompt.ui:85
 msgid "Save Password"
-msgstr "Uložit heslo"
+msgstr "Enregistrer le mot de passe"
