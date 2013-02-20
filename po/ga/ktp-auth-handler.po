@@ -27,7 +27,7 @@ msgstr "kscanne@gmail.com"
 
 #: main.cpp:47
 msgid "Telepathy Authentication Handler"
-msgstr ""
+msgstr "Láimhseálaí Fíordheimhnithe Telepathy"
 
 #: main.cpp:49
 msgid "David Edmundson"
@@ -49,12 +49,12 @@ msgstr "Earráid fhíordheimhnithe"
 #: x-messenger-oauth2-auth-operation.cpp:121
 #: x-telepathy-password-auth-operation.cpp:108
 msgid "User cancelled auth"
-msgstr ""
+msgstr "Fíordheimhniú cealaithe ag an úsáideoir"
 
 #. i18n: ectx: property (text), widget (KTitleWidget, title)
 #: x-telepathy-password-prompt.ui:45
 msgid "Please Enter Your Account Password"
-msgstr ""
+msgstr "Cuir Focal Faire Do Chuntais Isteach"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: x-telepathy-password-prompt.ui:57

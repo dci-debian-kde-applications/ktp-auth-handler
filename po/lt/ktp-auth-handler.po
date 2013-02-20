@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2012-08-28 20:46+0200\n"
-"PO-Revision-Date: 2012-08-05 19:05+0300\n"
+"PO-Revision-Date: 2012-10-28 14:24+0200\n"
 "Last-Translator: Liudas Ališauskas <liudas.alisauskas@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -30,7 +30,7 @@ msgstr "stikonas@gmail.com,liudas@akmc.lt"
 
 #: main.cpp:47
 msgid "Telepathy Authentication Handler"
-msgstr "Telepatijos autentifikavimosi modulis"
+msgstr "Telepathy tapatumo nustatymas"
 
 #: main.cpp:49
 msgid "David Edmundson"
