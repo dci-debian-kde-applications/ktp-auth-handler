@@ -1,0 +1,121 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Lê Hoàng Phương <herophuong93@gmail.com>, 2012, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"PO-Revision-Date: 2013-01-08 10:38+0800\n"
+"Last-Translator: Lê Hoàng Phương <herophuong93@gmail.com>\n"
+"Language-Team: Vietnamese <kde-i18n-vi@kde.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Lê Hoàng Phương"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "herophuong93@gmail.com"
+
+#: conference-auth-op.cpp:94
+#, kde-format
+msgid "Please provide a password for the chat room %1"
+msgstr "Hãy tạo một mật khẩu cho phòng trò chuyện %1"
+
+#: main.cpp:48
+msgid "Telepathy Authentication Handler"
+msgstr "Trình xử lý xác thực Telepathy"
+
+#: main.cpp:50
+msgid "David Edmundson"
+msgstr "David Edmundson"
+
+#: main.cpp:50 main.cpp:51
+msgid "Developer"
+msgstr "Nhà phát triển"
+
+#: main.cpp:51
+msgid "Daniele E. Domenichelli"
+msgstr "Daniele E. Domenichelli"
+
+#: tls-cert-verifier-op.cpp:135
+#, kde-format
+msgid ""
+"The server failed the authenticity check (%1).\n"
+"\n"
+msgstr ""
+
+#: tls-cert-verifier-op.cpp:145 tls-cert-verifier-op.cpp:163
+#, fuzzy
+#| msgid "Authentication error"
+msgid "Server Authentication"
+msgstr "Lỗi xác thực"
+
+#: tls-cert-verifier-op.cpp:146
+msgid "&Details"
+msgstr ""
+
+#: tls-cert-verifier-op.cpp:147
+msgid "Co&ntinue"
+msgstr ""
+
+#: tls-cert-verifier-op.cpp:148
+msgid "&Cancel"
+msgstr ""
+
+#: tls-cert-verifier-op.cpp:160
+msgid ""
+"Would you like to accept this certificate forever without being prompted?"
+msgstr ""
+
+#: tls-cert-verifier-op.cpp:164
+msgid "&Forever"
+msgstr ""
+
+#: tls-cert-verifier-op.cpp:165
+msgid "&Current Session only"
+msgstr ""
+
+#: x-messenger-oauth2-auth-operation.cpp:106
+#: x-telepathy-password-auth-operation.cpp:84
+msgid "Authentication error"
+msgstr "Lỗi xác thực"
+
+#: x-messenger-oauth2-auth-operation.cpp:121
+#: x-telepathy-password-auth-operation.cpp:108
+msgid "User cancelled auth"
+msgstr "Người dùng đã huỷ xác thực"
+
+#. i18n: ectx: property (text), widget (KTitleWidget, title)
+#: x-telepathy-password-prompt.ui:45
+msgid "Please Enter Your Account Password"
+msgstr "Hãy nhập mật khẩu tài khoản của bạn"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: x-telepathy-password-prompt.ui:57
+msgid "Account:"
+msgstr "Tài khoản:"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: x-telepathy-password-prompt.ui:71
+msgid "Password:"
+msgstr "Mật khẩu:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, savePassword)
+#: x-telepathy-password-prompt.ui:85
+msgid "Save Password"
+msgstr "Lưu mật khẩu"
+
+#~ msgid "Accept this certificate from <b>%1?</b><br />%2<br />"
+#~ msgstr "Chấp nhận chứng thực từ <b>%1?</b><br />%2<br />"
+
+#~ msgid "Untrusted certificate"
+#~ msgstr "Chứng thực không tin tưởng"

@@ -1,20 +1,20 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Martin Schlander <mschlander@opensuse.org>, 2011, 2012.
+# Martin Schlander <mschlander@opensuse.org>, 2011, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-28 20:46+0200\n"
-"PO-Revision-Date: 2012-01-09 15:20+0100\n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"PO-Revision-Date: 2013-03-30 09:49+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
-"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
-"Language: \n"
+"Language-Team: Danish <kde-i18n-doc@kde.org>\n"
+"Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 msgctxt "NAME OF TRANSLATORS"
@@ -25,21 +25,64 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "mschlander@opensuse.org"
 
-#: main.cpp:47
+#: conference-auth-op.cpp:94
+#, kde-format
+msgid "Please provide a password for the chat room %1"
+msgstr "Angiv venligst adgangskode til chatrummet %1"
+
+#: main.cpp:48
 msgid "Telepathy Authentication Handler"
 msgstr "Autentificeringshåndtering til Telepathy"
 
-#: main.cpp:49
+#: main.cpp:50
 msgid "David Edmundson"
 msgstr "David Edmundson"
 
-#: main.cpp:49 main.cpp:50
+#: main.cpp:50 main.cpp:51
 msgid "Developer"
 msgstr "Udvikler"
 
-#: main.cpp:50
+#: main.cpp:51
 msgid "Daniele E. Domenichelli"
 msgstr "Daniele E. Domenichelli"
+
+#: tls-cert-verifier-op.cpp:135
+#, kde-format
+msgid ""
+"The server failed the authenticity check (%1).\n"
+"\n"
+msgstr ""
+"Serveren klarede ikke godkendelsestjekket (%1).\n"
+"\n"
+
+#: tls-cert-verifier-op.cpp:145 tls-cert-verifier-op.cpp:163
+msgid "Server Authentication"
+msgstr "Servergodkendelse"
+
+#: tls-cert-verifier-op.cpp:146
+msgid "&Details"
+msgstr "&Detaljer"
+
+#: tls-cert-verifier-op.cpp:147
+msgid "Co&ntinue"
+msgstr "&Fortsæt"
+
+#: tls-cert-verifier-op.cpp:148
+msgid "&Cancel"
+msgstr "&Annullér"
+
+#: tls-cert-verifier-op.cpp:160
+msgid ""
+"Would you like to accept this certificate forever without being prompted?"
+msgstr "Vil du gerne acceptere dette certifikat altid uden at blive spurgt?"
+
+#: tls-cert-verifier-op.cpp:164
+msgid "&Forever"
+msgstr "&Altid"
+
+#: tls-cert-verifier-op.cpp:165
+msgid "&Current Session only"
+msgstr "&Kun nuværende session"
 
 #: x-messenger-oauth2-auth-operation.cpp:106
 #: x-telepathy-password-auth-operation.cpp:84
@@ -70,6 +113,12 @@ msgstr "Adgangskode:"
 #: x-telepathy-password-prompt.ui:85
 msgid "Save Password"
 msgstr "Gem adgangskode"
+
+#~ msgid "Accept this certificate from <b>%1?</b><br />%2<br />"
+#~ msgstr "Acceptér dette certifikat fra <b>%1?</b><br />%2<br />"
+
+#~ msgid "Untrusted certificate"
+#~ msgstr "Ikke-betroet certifikat"
 
 #~ msgid "TextLabel"
 #~ msgstr "TekstEtiket"

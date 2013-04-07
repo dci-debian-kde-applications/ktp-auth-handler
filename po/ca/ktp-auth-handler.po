@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-auth-handler\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-28 20:46+0200\n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
 "PO-Revision-Date: 2012-04-28 22:40+0200\n"
 "Last-Translator: Josep Ma. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -28,21 +28,63 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "txemaq@gmail.com"
 
-#: main.cpp:47
+#: conference-auth-op.cpp:94
+#, kde-format
+msgid "Please provide a password for the chat room %1"
+msgstr ""
+
+#: main.cpp:48
 msgid "Telepathy Authentication Handler"
 msgstr "Gestor d'autenticació del Telepathy"
 
-#: main.cpp:49
+#: main.cpp:50
 msgid "David Edmundson"
 msgstr "David Edmundson"
 
-#: main.cpp:49 main.cpp:50
+#: main.cpp:50 main.cpp:51
 msgid "Developer"
 msgstr "Desenvolupador"
 
-#: main.cpp:50
+#: main.cpp:51
 msgid "Daniele E. Domenichelli"
 msgstr "Daniele E. Domenichelli"
+
+#: tls-cert-verifier-op.cpp:135
+#, kde-format
+msgid ""
+"The server failed the authenticity check (%1).\n"
+"\n"
+msgstr ""
+
+#: tls-cert-verifier-op.cpp:145 tls-cert-verifier-op.cpp:163
+#, fuzzy
+msgid "Server Authentication"
+msgstr "Error d'autenticació"
+
+#: tls-cert-verifier-op.cpp:146
+msgid "&Details"
+msgstr ""
+
+#: tls-cert-verifier-op.cpp:147
+msgid "Co&ntinue"
+msgstr ""
+
+#: tls-cert-verifier-op.cpp:148
+msgid "&Cancel"
+msgstr ""
+
+#: tls-cert-verifier-op.cpp:160
+msgid ""
+"Would you like to accept this certificate forever without being prompted?"
+msgstr ""
+
+#: tls-cert-verifier-op.cpp:164
+msgid "&Forever"
+msgstr ""
+
+#: tls-cert-verifier-op.cpp:165
+msgid "&Current Session only"
+msgstr ""
 
 #: x-messenger-oauth2-auth-operation.cpp:106
 #: x-telepathy-password-auth-operation.cpp:84

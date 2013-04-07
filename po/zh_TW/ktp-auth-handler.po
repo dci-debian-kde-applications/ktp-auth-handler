@@ -1,20 +1,20 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Franklin Weng <franklin@mail.everfocus.com.tw>, 2012.
+# Franklin Weng <franklin@mail.everfocus.com.tw>, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-28 20:46+0200\n"
-"PO-Revision-Date: 2012-01-04 08:36+0800\n"
-"Last-Translator: Franklin Weng <franklin@mail.everfocus.com.tw>\n"
-"Language-Team: Chinese Traditional <zh-l10n@linux.org.tw>\n"
-"Language: \n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"PO-Revision-Date: 2013-02-21 08:26+0800\n"
+"Last-Translator: Franklin Weng <franklin at goodhorse dot idv dot tw>\n"
+"Language-Team: Chinese Traditional <kde-tw@googlegroups.com>\n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 msgctxt "NAME OF TRANSLATORS"
@@ -25,21 +25,64 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "franklin at goodhorse dot idv dot tw"
 
-#: main.cpp:47
+#: conference-auth-op.cpp:94
+#, kde-format
+msgid "Please provide a password for the chat room %1"
+msgstr "請提供聊天室 %1 的密碼"
+
+#: main.cpp:48
 msgid "Telepathy Authentication Handler"
 msgstr "Telepathy 認證處理器"
 
-#: main.cpp:49
+#: main.cpp:50
 msgid "David Edmundson"
 msgstr "David Edmundson"
 
-#: main.cpp:49 main.cpp:50
+#: main.cpp:50 main.cpp:51
 msgid "Developer"
 msgstr "開發者"
 
-#: main.cpp:50
+#: main.cpp:51
 msgid "Daniele E. Domenichelli"
 msgstr "Daniele E. Domenichelli"
+
+#: tls-cert-verifier-op.cpp:135
+#, kde-format
+msgid ""
+"The server failed the authenticity check (%1).\n"
+"\n"
+msgstr ""
+"此伺服器憑證未能通過認證測試 (%1)。\n"
+"\n"
+
+#: tls-cert-verifier-op.cpp:145 tls-cert-verifier-op.cpp:163
+msgid "Server Authentication"
+msgstr "伺服端認證"
+
+#: tls-cert-verifier-op.cpp:146
+msgid "&Details"
+msgstr "詳細資料(&D)"
+
+#: tls-cert-verifier-op.cpp:147
+msgid "Co&ntinue"
+msgstr "繼續(&N)"
+
+#: tls-cert-verifier-op.cpp:148
+msgid "&Cancel"
+msgstr "取消(&C)"
+
+#: tls-cert-verifier-op.cpp:160
+msgid ""
+"Would you like to accept this certificate forever without being prompted?"
+msgstr "您希望以後不提示就接受該憑證嗎？"
+
+#: tls-cert-verifier-op.cpp:164
+msgid "&Forever"
+msgstr "永遠(&F)"
+
+#: tls-cert-verifier-op.cpp:165
+msgid "&Current Session only"
+msgstr "只用於目前的工作階段(&C)"
 
 #: x-messenger-oauth2-auth-operation.cpp:106
 #: x-telepathy-password-auth-operation.cpp:84
@@ -70,3 +113,9 @@ msgstr "密碼："
 #: x-telepathy-password-prompt.ui:85
 msgid "Save Password"
 msgstr "儲存密碼"
+
+#~ msgid "Accept this certificate from <b>%1?</b><br />%2<br />"
+#~ msgstr "要接受從 <b>%1</b> 來的憑證嗎？<br />%2<br />"
+
+#~ msgid "Untrusted certificate"
+#~ msgstr "未受信任的憑證"
