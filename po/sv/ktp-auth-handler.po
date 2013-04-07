@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhall <stefan.asserhall@comhem.se>, 2011, 2012.
+# Stefan Asserhall <stefan.asserhall@comhem.se>, 2011, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-28 20:46+0200\n"
-"PO-Revision-Date: 2012-01-03 17:17+0100\n"
-"Last-Translator: Stefan Asserhall <stefan.asserhall@comhem.se>\n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"PO-Revision-Date: 2013-02-11 22:17+0100\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@comhem.se>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
@@ -25,21 +25,65 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "stefan.asserhall@comhem.se"
 
-#: main.cpp:47
+#: conference-auth-op.cpp:94
+#, kde-format
+msgid "Please provide a password for the chat room %1"
+msgstr "Ange ett lösenord för chattrummet %1"
+
+#: main.cpp:48
 msgid "Telepathy Authentication Handler"
 msgstr "Telepathy-behörighetshanterare"
 
-#: main.cpp:49
+#: main.cpp:50
 msgid "David Edmundson"
 msgstr "David Edmundson"
 
-#: main.cpp:49 main.cpp:50
+#: main.cpp:50 main.cpp:51
 msgid "Developer"
 msgstr "Utvecklare"
 
-#: main.cpp:50
+#: main.cpp:51
 msgid "Daniele E. Domenichelli"
 msgstr "Daniele E. Domenichelli"
+
+#: tls-cert-verifier-op.cpp:135
+#, kde-format
+msgid ""
+"The server failed the authenticity check (%1).\n"
+"\n"
+msgstr ""
+"Behörighetkontrollen misslyckades för servern (%1).\n"
+"\n"
+
+#: tls-cert-verifier-op.cpp:145 tls-cert-verifier-op.cpp:163
+msgid "Server Authentication"
+msgstr "Serverbehörighetskontroll"
+
+#: tls-cert-verifier-op.cpp:146
+msgid "&Details"
+msgstr "&Detaljinformation"
+
+#: tls-cert-verifier-op.cpp:147
+msgid "Co&ntinue"
+msgstr "Fort&sätt"
+
+#: tls-cert-verifier-op.cpp:148
+msgid "&Cancel"
+msgstr "&Avbryt"
+
+#: tls-cert-verifier-op.cpp:160
+msgid ""
+"Would you like to accept this certificate forever without being prompted?"
+msgstr ""
+"Vill du acceptera det här certifikatet för alltid utan att bli tillfrågad?"
+
+#: tls-cert-verifier-op.cpp:164
+msgid "&Forever"
+msgstr "&För alltid"
+
+#: tls-cert-verifier-op.cpp:165
+msgid "&Current Session only"
+msgstr "&Endast aktuell session"
 
 #: x-messenger-oauth2-auth-operation.cpp:106
 #: x-telepathy-password-auth-operation.cpp:84
@@ -70,6 +114,12 @@ msgstr "Lösenord:"
 #: x-telepathy-password-prompt.ui:85
 msgid "Save Password"
 msgstr "Spara lösenord"
+
+#~ msgid "Accept this certificate from <b>%1?</b><br />%2<br />"
+#~ msgstr "Acceptera certifikatet från <b>%1?</b><br />%2<br />"
+
+#~ msgid "Untrusted certificate"
+#~ msgstr "Opålitligt certifikat"
 
 #~ msgid "TextLabel"
 #~ msgstr "Textetikett"

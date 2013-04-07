@@ -1,11 +1,12 @@
 project(ktp-auth-handler)
 
-set(KTP_AUTH_HANDLER_VERSION "0.5.3")
+set(KTP_AUTH_HANDLER_VERSION "0.6.0")
 
 set (CMAKE_MODULE_PATH
      "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules"
      ${CMAKE_MODULE_PATH}
 )
+cmake_policy(SET CMP0002 OLD)
 
 set(IS_KTP_INTERNAL_MODULE TRUE)
 set(KDE_MIN_VERSION "4.4.75")
@@ -13,19 +14,19 @@ find_package (KDE4 4.4.75 REQUIRED)
 find_package (TelepathyQt4 0.8.9 REQUIRED)
 find_package (KTp REQUIRED)
 find_package (QJSON REQUIRED)
+find_package (QCA2 REQUIRED)
 
 include (KDE4Defaults)
 include (MacroLibrary)
 
-add_definitions (${KDE4_DEFINITIONS}
-                 -DQT_NO_CAST_FROM_ASCII
-                 -DQT_NO_KEYWORDS
-)
+add_definitions (${KDE4_DEFINITIONS})
 
 include_directories (${KDE4_INCLUDES}
                      ${TELEPATHY_QT4_INCLUDE_DIR}
                      ${KTP_INCLUDE_DIR}
                      ${QJSON_INCLUDE_DIR}
+                     ${QCA2_INCLUDE_DIR}
+                     ${CMAKE_CURRENT_SOURCE_DIR}/kssl
 )
 
 set(ktp_auth_handler_SRCS
@@ -39,6 +40,8 @@ set(ktp_auth_handler_SRCS
     x-telepathy-password-prompt.cpp
     x-messenger-oauth2-auth-operation.cpp
     x-messenger-oauth2-prompt.cpp
+    conference-auth-op.cpp
+    conference-auth-observer.cpp
 )
 
 configure_file(version.h.in ${CMAKE_CURRENT_BINARY_DIR}/version.h)
@@ -58,21 +61,26 @@ target_link_libraries(ktp-auth-handler
     ${KDE4_KDEUI_LIBS}
     ${KDE4_KDEWEBKIT_LIBS}
     ${QJSON_LIBRARIES}
+    ${QCA2_LIBRARIES}
 )
 
 configure_file(org.freedesktop.Telepathy.Client.KTp.SASLHandler.service.in
                ${CMAKE_CURRENT_BINARY_DIR}/org.freedesktop.Telepathy.Client.KTp.SASLHandler.service)
-#configure_file(org.freedesktop.Telepathy.Client.KTp.TLSHandler.service.in
-#               ${CMAKE_CURRENT_BINARY_DIR}/org.freedesktop.Telepathy.Client.KTp.TLSHandler.service)
+configure_file(org.freedesktop.Telepathy.Client.KTp.TLSHandler.service.in
+               ${CMAKE_CURRENT_BINARY_DIR}/org.freedesktop.Telepathy.Client.KTp.TLSHandler.service)
 
+configure_file(org.freedesktop.Telepathy.Client.KTp.ConfAuthObserver.service.in
+	${CMAKE_CURRENT_BINARY_DIR}/org.freedesktop.Telepathy.Client.KTp.ConfAuthObserver.service)
 
 install(TARGETS ktp-auth-handler DESTINATION ${LIBEXEC_INSTALL_DIR})
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.freedesktop.Telepathy.Client.KTp.SASLHandler.service
+	      ${CMAKE_CURRENT_BINARY_DIR}/org.freedesktop.Telepathy.Client.KTp.ConfAuthObserver.service
         DESTINATION ${DBUS_SERVICES_INSTALL_DIR})
-#install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.freedesktop.Telepathy.Client.KTp.TLSHandler.service
-#        DESTINATION ${DBUS_SERVICES_INSTALL_DIR})
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.freedesktop.Telepathy.Client.KTp.TLSHandler.service
+        DESTINATION ${DBUS_SERVICES_INSTALL_DIR})
 install(FILES KTp.SASLHandler.client DESTINATION ${SHARE_INSTALL_PREFIX}/telepathy/clients/)
-#install(FILES KTp.TLSHandler.client DESTINATION ${SHARE_INSTALL_PREFIX}/telepathy/clients/)
+install(FILES KTp.TLSHandler.client DESTINATION ${SHARE_INSTALL_PREFIX}/telepathy/clients/)
+install(FILES KTp.ConfAuthObserver.client DESTINATION ${SHARE_INSTALL_PREFIX}/telepathy/clients/)
 find_package(Msgfmt REQUIRED)
 find_package(Gettext REQUIRED)
 add_subdirectory( po )

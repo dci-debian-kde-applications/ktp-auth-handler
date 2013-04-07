@@ -34,6 +34,7 @@
 
 #include "sasl-handler.h"
 #include "tls-handler.h"
+#include "conference-auth-observer.h"
 #include "version.h"
 
 #include <KTp/telepathy-handler-application.h>
@@ -49,6 +50,7 @@ int main(int argc, char *argv[])
     aboutData.addAuthor(ki18n("David Edmundson"), ki18n("Developer"), "kde@davidedmundson.co.uk");
     aboutData.addAuthor(ki18n("Daniele E. Domenichelli"), ki18n("Developer"), "daniele.domenichelli@gmail.com");
     aboutData.setProductName("telepathy/auth-handler");
+    aboutData.setProgramIconName(QLatin1String("telepathy-kde"));
 
     KCmdLineArgs::init(argc, argv, &aboutData);
     KTp::TelepathyHandlerApplication app;
@@ -66,35 +68,24 @@ int main(int argc, char *argv[])
     Tp::ClientRegistrarPtr clientRegistrar = Tp::ClientRegistrar::create(
             accountFactory, connectionFactory, channelFactory);
 
-    int handlers = 1;
+    QMap<QString,Tp::AbstractClientPtr> handlers;
+    handlers.insert(QLatin1String("KTp.SASLHandler"), Tp::SharedPtr<SaslHandler>(new SaslHandler));
+    handlers.insert(QLatin1String("KTp.TLSHandler"), Tp::SharedPtr<TlsHandler>(new TlsHandler));
+    Tp::ChannelClassSpecList confAuthFilter =  Tp::ChannelClassSpecList() << Tp::ChannelClassSpec::textChatroom();
+    handlers.insert(QLatin1String("KTp.ConfAuthObserver"), Tp::SharedPtr<ConferenceAuthObserver>(new ConferenceAuthObserver(confAuthFilter)));
 
-    Tp::ChannelClassSpecList saslFilter;
-    QVariantMap saslOtherProperties;
-    saslOtherProperties.insert(
-            TP_QT_IFACE_CHANNEL_TYPE_SERVER_AUTHENTICATION + QLatin1String(".AuthenticationMethod"),
-            TP_QT_IFACE_CHANNEL_INTERFACE_SASL_AUTHENTICATION);
-    saslFilter.append(Tp::ChannelClassSpec(TP_QT_IFACE_CHANNEL_TYPE_SERVER_AUTHENTICATION,
-                Tp::HandleTypeNone, false, saslOtherProperties));
-    Tp::SharedPtr<SaslHandler> saslHandler = Tp::SharedPtr<SaslHandler>(new SaslHandler(saslFilter));
-    if (!clientRegistrar->registerClient(
-                Tp::AbstractClientPtr(saslHandler), QLatin1String("KTp.SASLHandler"))) {
-        handlers -= 1;
+    int loadedHandlers = handlers.count();
+    QMap<QString,Tp::AbstractClientPtr>::ConstIterator iter = handlers.constBegin();
+    for (; iter != handlers.constEnd(); ++iter) {
+        if (!clientRegistrar->registerClient(iter.value(), iter.key())) {
+            loadedHandlers--;
+        }
     }
 
-#if 0
-    Tp::ChannelClassSpecList tlsFilter;
-    tlsFilter.append(Tp::ChannelClassSpec(TP_QT_IFACE_CHANNEL_TYPE_SERVER_TLS_CONNECTION,
-                Tp::HandleTypeNone, false));
-    Tp::SharedPtr<TlsHandler> tlsHandler = Tp::SharedPtr<TlsHandler>(new TlsHandler(tlsFilter));
-    if (!clientRegistrar->registerClient(
-                Tp::AbstractClientPtr(tlsHandler), QLatin1String("KTp.TLSHandler"))) {
-        handlers -= 1;
-    }
-#endif
-
-    if (!handlers) {
+    if (loadedHandlers == 0) {
         kDebug() << "No handlers registered. Exiting";
         return 1;
     }
+
     return app.exec();
 }

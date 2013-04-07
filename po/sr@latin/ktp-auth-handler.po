@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-auth-handler\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-28 20:46+0200\n"
-"PO-Revision-Date: 2012-03-19 01:08+0100\n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"PO-Revision-Date: 2013-02-09 22:46+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@latin\n"
@@ -27,21 +27,64 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "pejakm@gmail.com"
 
-#: main.cpp:47
+#: conference-auth-op.cpp:94
+#, kde-format
+msgid "Please provide a password for the chat room %1"
+msgstr "Unesite lozinku sobe za ćaskanje %1"
+
+#: main.cpp:48
 msgid "Telepathy Authentication Handler"
 msgstr "Rukovalac autentifikacijom za Telepathy"
 
-#: main.cpp:49
+#: main.cpp:50
 msgid "David Edmundson"
 msgstr "Dejvid Edmundson"
 
-#: main.cpp:49 main.cpp:50
+#: main.cpp:50 main.cpp:51
 msgid "Developer"
 msgstr "Programer"
 
-#: main.cpp:50
+#: main.cpp:51
 msgid "Daniele E. Domenichelli"
 msgstr "Danijele Domeničeli"
+
+#: tls-cert-verifier-op.cpp:135
+#, kde-format
+msgid ""
+"The server failed the authenticity check (%1).\n"
+"\n"
+msgstr ""
+"Server nije prošao autentifikaciju (%1).\n"
+"\n"
+
+#: tls-cert-verifier-op.cpp:145 tls-cert-verifier-op.cpp:163
+msgid "Server Authentication"
+msgstr "Autentifikacija servera"
+
+#: tls-cert-verifier-op.cpp:146
+msgid "&Details"
+msgstr "&Detalji"
+
+#: tls-cert-verifier-op.cpp:147
+msgid "Co&ntinue"
+msgstr "&Nastavi"
+
+#: tls-cert-verifier-op.cpp:148
+msgid "&Cancel"
+msgstr "&Odustani"
+
+#: tls-cert-verifier-op.cpp:160
+msgid ""
+"Would you like to accept this certificate forever without being prompted?"
+msgstr "Želite li da prihvatite ovaj sertifikat zauvek, bez daljeg pitanja?"
+
+#: tls-cert-verifier-op.cpp:164
+msgid "&Forever"
+msgstr "&Zauvek"
+
+#: tls-cert-verifier-op.cpp:165
+msgid "&Current Session only"
+msgstr "&Samo za tekuću sesiju"
 
 #: x-messenger-oauth2-auth-operation.cpp:106
 #: x-telepathy-password-auth-operation.cpp:84
