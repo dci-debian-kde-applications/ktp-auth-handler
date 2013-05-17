@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Ni Hui <shuizhuyuanluo@126.com>, 2012.
-# Weng Xuetian <wengxt@gmail.com>, 2012.
+# Weng Xuetian <wengxt@gmail.com>, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2013-03-27 10:06+0100\n"
-"PO-Revision-Date: 2012-12-10 21:09-0500\n"
+"PO-Revision-Date: 2013-04-06 16:08-0400\n"
 "Last-Translator: Weng Xuetian <wengxt@gmail.com>\n"
 "Language-Team: Chinese Simplified <kde-china@kde.org>\n"
 "Language: zh_CN\n"
@@ -53,36 +53,37 @@ msgid ""
 "The server failed the authenticity check (%1).\n"
 "\n"
 msgstr ""
+"服务器没有通过真实性检查 (%1)。\n"
+"\n"
 
 #: tls-cert-verifier-op.cpp:145 tls-cert-verifier-op.cpp:163
-#, fuzzy
 msgid "Server Authentication"
-msgstr "验证错误"
+msgstr "服务器验证"
 
 #: tls-cert-verifier-op.cpp:146
 msgid "&Details"
-msgstr ""
+msgstr "细节(&D)"
 
 #: tls-cert-verifier-op.cpp:147
 msgid "Co&ntinue"
-msgstr ""
+msgstr "继续(&N)"
 
 #: tls-cert-verifier-op.cpp:148
 msgid "&Cancel"
-msgstr ""
+msgstr "取消(&C)"
 
 #: tls-cert-verifier-op.cpp:160
 msgid ""
 "Would you like to accept this certificate forever without being prompted?"
-msgstr ""
+msgstr "您希望以后不提示就接受该证书吗？"
 
 #: tls-cert-verifier-op.cpp:164
 msgid "&Forever"
-msgstr ""
+msgstr "永远(&F)"
 
 #: tls-cert-verifier-op.cpp:165
 msgid "&Current Session only"
-msgstr ""
+msgstr "仅当前会话(&C)"
 
 #: x-messenger-oauth2-auth-operation.cpp:106
 #: x-telepathy-password-auth-operation.cpp:84
