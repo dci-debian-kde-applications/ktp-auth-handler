@@ -1,10 +1,15 @@
-ktp-auth-handler (0.5.3-1) UNRELEASED; urgency=low
+ktp-auth-handler (0.6.1-1) UNRELEASED; urgency=low
 
+  [ Ritesh Raj Sarraf ]
   * [f62dcc7] Imported Upstream version 0.5.1
   * [a202006] Imported Upstream version 0.5.3
   * [b481578] bump build-dep to 0.5.1
 
- -- Ritesh Raj Sarraf <rrs@debian.org>  Wed, 20 Feb 2013 23:19:40 +0530
+  [ Diane Trout ]
+  * [f23db8b] Imported Upstream version 0.6.1
+  * Add libqca2 dependency
+
+ -- Diane Trout <diane@ghic.org>  Fri, 17 May 2013 14:51:01 -0700
 
 ktp-auth-handler (0.4.0-1) unstable; urgency=low
 
