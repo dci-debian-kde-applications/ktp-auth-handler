@@ -76,11 +76,11 @@ msgstr "&Odustani"
 #: tls-cert-verifier-op.cpp:160
 msgid ""
 "Would you like to accept this certificate forever without being prompted?"
-msgstr "Želite li da prihvatite ovaj sertifikat zauvek, bez daljeg pitanja?"
+msgstr "Želite li da prihvatite ovaj sertifikat zauvijek, bez daljeg pitanja?"
 
 #: tls-cert-verifier-op.cpp:164
 msgid "&Forever"
-msgstr "&Zauvek"
+msgstr "&Zauvijek"
 
 #: tls-cert-verifier-op.cpp:165
 msgid "&Current Session only"
