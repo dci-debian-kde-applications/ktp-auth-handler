@@ -9,6 +9,7 @@ ktp-auth-handler (0.6.2-1) UNRELEASED; urgency=low
   * [f23db8b] Imported Upstream version 0.6.1
   * Add libqca2 dependency
   * Imported Upstream version 0.6.2
+  * Set Uploaders to Diane Trout and Michał Zając
 
  -- Diane Trout <diane@ghic.org>  Fri, 24 May 2013 23:31:29 -0700
 
