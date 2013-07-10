@@ -1,5 +1,5 @@
 usr/lib/kde4/libexec/ktp-auth-handler
 usr/share/dbus-1/services/org.freedesktop.Telepathy.Client.KTp.SASLHandler.service
 usr/share/telepathy/clients/*.client
-usr/share/dbus-1/services/*.services
+usr/share/dbus-1/services/*.service
 usr/share/locale/*
