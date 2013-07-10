@@ -12,6 +12,7 @@ ktp-auth-handler (0.6.2-1) UNRELEASED; urgency=low
   * Set Uploaders to Diane Trout and Michał Zając
   * Include all telepathy client and d-bus configuration files.
             This adds KTp.ConfAuthObserver and KTp.TLSHandler.
+  * Update Standards-Version to 3.9.4. No changes needed.
 
  -- Diane Trout <diane@ghic.org>  Fri, 24 May 2013 23:31:29 -0700
 
