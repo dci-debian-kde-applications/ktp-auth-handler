@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"POT-Creation-Date: 2013-07-20 05:08+0000\n"
 "PO-Revision-Date: 2013-03-16 12:15+0200\n"
 "Last-Translator: Sergiu Bivol <sergiu@ase.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -47,7 +47,7 @@ msgstr "Dezvoltator"
 msgid "Daniele E. Domenichelli"
 msgstr "Daniele Galdi"
 
-#: tls-cert-verifier-op.cpp:135
+#: tls-cert-verifier-op.cpp:138
 #, kde-format
 msgid ""
 "The server failed the authenticity check (%1).\n"
@@ -56,33 +56,33 @@ msgstr ""
 "Serverul nu a trecut testul de autenticitate (%1).\n"
 "\n"
 
-#: tls-cert-verifier-op.cpp:145 tls-cert-verifier-op.cpp:163
+#: tls-cert-verifier-op.cpp:148 tls-cert-verifier-op.cpp:166
 msgid "Server Authentication"
 msgstr "Autentificare server"
 
-#: tls-cert-verifier-op.cpp:146
+#: tls-cert-verifier-op.cpp:149
 msgid "&Details"
 msgstr "&Detalii"
 
-#: tls-cert-verifier-op.cpp:147
+#: tls-cert-verifier-op.cpp:150
 msgid "Co&ntinue"
 msgstr "Co&ntinuă"
 
-#: tls-cert-verifier-op.cpp:148
+#: tls-cert-verifier-op.cpp:151
 msgid "&Cancel"
 msgstr "&Renunță"
 
-#: tls-cert-verifier-op.cpp:160
+#: tls-cert-verifier-op.cpp:163
 msgid ""
 "Would you like to accept this certificate forever without being prompted?"
 msgstr ""
 "Doriți să acceptați permanent acest certificat fără să mai fiți întrebat?"
 
-#: tls-cert-verifier-op.cpp:164
+#: tls-cert-verifier-op.cpp:167
 msgid "&Forever"
 msgstr "&Permanent"
 
-#: tls-cert-verifier-op.cpp:165
+#: tls-cert-verifier-op.cpp:168
 msgid "&Current Session only"
 msgstr "Numai sesiunea &curentă"
 
