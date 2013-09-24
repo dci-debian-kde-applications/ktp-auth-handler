@@ -1,0 +1,30 @@
+Author: Diane Trout <diane@ghic.org>
+Description:  Check for QCA certificate availability at run time.
+
+This fixes a crash if packagers don't include qca-ossl a runtime
+plugin for QCA needed to load SSL Certs. 
+
+This was accepted upstream as:
+http://quickgit.kde.org/?p=ktp-auth-handler.git&a=commit&h=c5222770fff5044dff2bc1e9d9ed1c52b3dd68ac
+
+--- a/tls-cert-verifier-op.cpp
++++ b/tls-cert-verifier-op.cpp
+@@ -93,9 +93,17 @@
+     // Initialize QCA module
+     QCA::Initializer initializer;
+ 
++    if(!QCA::isSupported("cert")) {
++      setFinishedWithError(
++          QLatin1String("Cert.NoPlugin"),
++          i18n("The SSL/TLS support plugin is not available. "
++               "Certificate validation cannot be done."));
++      return;
++    }
++
+     QCA::CertificateChain chain;
+     Q_FOREACH (const QByteArray &data, m_certData) {
+-       chain << QCA::Certificate::fromDER(data);
++        chain << QCA::Certificate::fromDER(data);
+     }
+ 
+     if (verifyCertChain(chain)) {

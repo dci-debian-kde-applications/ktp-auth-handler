@@ -21,6 +21,7 @@ Package: kde-telepathy-auth-handler
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, kde-telepathy-data (>= 0.4)
 Recommends: kde-telepathy
+Suggests: libqca2-plugin-ossl
 Description: KDE Telepathy authentication handler
  This package provides a Telepathy handler for the ServerAuthentication
  and ServerTLSConnection Telepathy channel types, which means that it
