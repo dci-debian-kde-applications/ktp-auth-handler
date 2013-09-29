@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"POT-Creation-Date: 2013-07-20 05:08+0000\n"
 "PO-Revision-Date: 2013-04-11 20:03+0300\n"
 "Last-Translator: Liudas Ališauskas <liudas.alisauskas@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -49,7 +49,7 @@ msgstr "Programuotojas"
 msgid "Daniele E. Domenichelli"
 msgstr "Daniele E. Domenichelli"
 
-#: tls-cert-verifier-op.cpp:135
+#: tls-cert-verifier-op.cpp:138
 #, kde-format
 msgid ""
 "The server failed the authenticity check (%1).\n"
@@ -58,34 +58,34 @@ msgstr ""
 "Serveris nepraėjo autentiškumo testo (%1).\n"
 "\n"
 
-#: tls-cert-verifier-op.cpp:145 tls-cert-verifier-op.cpp:163
+#: tls-cert-verifier-op.cpp:148 tls-cert-verifier-op.cpp:166
 msgid "Server Authentication"
 msgstr "Serverio autentikacija"
 
-#: tls-cert-verifier-op.cpp:146
+#: tls-cert-verifier-op.cpp:149
 msgid "&Details"
 msgstr "&Detalės"
 
-#: tls-cert-verifier-op.cpp:147
+#: tls-cert-verifier-op.cpp:150
 msgid "Co&ntinue"
 msgstr "Tęsti"
 
-#: tls-cert-verifier-op.cpp:148
+#: tls-cert-verifier-op.cpp:151
 msgid "&Cancel"
 msgstr "&Atšaukti"
 
-#: tls-cert-verifier-op.cpp:160
+#: tls-cert-verifier-op.cpp:163
 msgid ""
 "Would you like to accept this certificate forever without being prompted?"
 msgstr ""
 "Ar Jūs norėtumėte priimti šį liudijimą visam laikui neklausiant kiekvieną "
 "kartą?"
 
-#: tls-cert-verifier-op.cpp:164
+#: tls-cert-verifier-op.cpp:167
 msgid "&Forever"
 msgstr "&Visada"
 
-#: tls-cert-verifier-op.cpp:165
+#: tls-cert-verifier-op.cpp:168
 msgid "&Current Session only"
 msgstr "&Tik dabartinė sesija"
 
