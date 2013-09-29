@@ -1,6 +1,6 @@
 project(ktp-auth-handler)
 
-set(KTP_AUTH_HANDLER_VERSION "0.6.3")
+set(KTP_AUTH_HANDLER_VERSION "0.6.80")
 
 set (CMAKE_MODULE_PATH
      "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules"
@@ -15,9 +15,15 @@ find_package (TelepathyQt4 0.8.9 REQUIRED)
 find_package (KTp REQUIRED)
 find_package (QJSON REQUIRED)
 find_package (QCA2 REQUIRED)
+find_package (AccountsQt)
+find_package (SignOnQt)
 
 include (KDE4Defaults)
 include (MacroLibrary)
+
+macro_log_feature(ACCOUNTSQT_FOUND "AccountsQt" "Support for Accounts-SSO" "https://code.google.com/p/accounts-sso/source/checkout?repo=libaccounts-qt" FALSE "" "")
+macro_log_feature(SIGNONQT_FOUND "SignonsQt" "Support for Accounts-SSO" "https://code.google.com/p/accounts-sso/source/checkout?repo=signond" FALSE "" "")
+macro_display_feature_log()
 
 add_definitions (${KDE4_DEFINITIONS})
 
@@ -44,12 +50,7 @@ set(ktp_auth_handler_SRCS
     conference-auth-observer.cpp
 )
 
-configure_file(version.h.in ${CMAKE_CURRENT_BINARY_DIR}/version.h)
-
-kde4_add_ui_files(ktp_auth_handler_SRCS x-telepathy-password-prompt.ui)
-kde4_add_executable(ktp-auth-handler ${ktp_auth_handler_SRCS})
-
-target_link_libraries(ktp-auth-handler
+set(ktp_auth_handler_LIBS
     ${QT_QTDBUS_LIBRARY}
     ${QT_QTGUI_LIBRARY}
     ${QT_QTXML_LIBRARY}
@@ -64,17 +65,49 @@ target_link_libraries(ktp-auth-handler
     ${QCA2_LIBRARIES}
 )
 
+#If we find Accounts-SSO frameworks, add support for it
+if(ACCOUNTSQT_FOUND AND SIGNONQT_FOUND)
+
+    add_definitions(-DHAVE_SSO)
+    set(ktp_auth_handler_SRCS
+        ${ktp_auth_handler_SRCS}
+        x-telepathy-sso-facebook-operation.cpp
+        x-telepathy-sso-google-operation.cpp
+        getcredentialsjob.cpp
+    )
+
+    set(ktp_auth_handler_LIBS
+        ${ktp_auth_handler_LIBS}
+        ${ACCOUNTSQT_LIBRARIES}
+        ${SIGNONQT_LIBRARIES}
+    )
+
+    include_directories(${ACCOUNTSQT_INCLUDE_DIRS}
+                        ${SIGNONQT_INCLUDE_DIRS}
+    )
+
+endif(ACCOUNTSQT_FOUND AND SIGNONQT_FOUND)
+
+configure_file(version.h.in ${CMAKE_CURRENT_BINARY_DIR}/version.h)
+
+kde4_add_ui_files(ktp_auth_handler_SRCS x-telepathy-password-prompt.ui)
+kde4_add_executable(ktp-auth-handler ${ktp_auth_handler_SRCS})
+
+target_link_libraries(ktp-auth-handler
+    ${ktp_auth_handler_LIBS}
+)
+
 configure_file(org.freedesktop.Telepathy.Client.KTp.SASLHandler.service.in
                ${CMAKE_CURRENT_BINARY_DIR}/org.freedesktop.Telepathy.Client.KTp.SASLHandler.service)
 configure_file(org.freedesktop.Telepathy.Client.KTp.TLSHandler.service.in
                ${CMAKE_CURRENT_BINARY_DIR}/org.freedesktop.Telepathy.Client.KTp.TLSHandler.service)
 
 configure_file(org.freedesktop.Telepathy.Client.KTp.ConfAuthObserver.service.in
-	${CMAKE_CURRENT_BINARY_DIR}/org.freedesktop.Telepathy.Client.KTp.ConfAuthObserver.service)
+    ${CMAKE_CURRENT_BINARY_DIR}/org.freedesktop.Telepathy.Client.KTp.ConfAuthObserver.service)
 
 install(TARGETS ktp-auth-handler DESTINATION ${LIBEXEC_INSTALL_DIR})
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.freedesktop.Telepathy.Client.KTp.SASLHandler.service
-	      ${CMAKE_CURRENT_BINARY_DIR}/org.freedesktop.Telepathy.Client.KTp.ConfAuthObserver.service
+    ${CMAKE_CURRENT_BINARY_DIR}/org.freedesktop.Telepathy.Client.KTp.ConfAuthObserver.service
         DESTINATION ${DBUS_SERVICES_INSTALL_DIR})
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.freedesktop.Telepathy.Client.KTp.TLSHandler.service
         DESTINATION ${DBUS_SERVICES_INSTALL_DIR})

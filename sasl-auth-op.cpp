@@ -19,8 +19,16 @@
  */
 
 #include "sasl-auth-op.h"
+
 #include "x-telepathy-password-auth-operation.h"
 #include "x-messenger-oauth2-auth-operation.h"
+
+#ifdef HAVE_SSO
+    #include "x-telepathy-sso-facebook-operation.h"
+    #include "x-telepathy-sso-google-operation.h"
+#endif
+
+#include <QtCore/QScopedPointer>
 
 #include <TelepathyQt/PendingVariantMap>
 
@@ -38,6 +46,11 @@ SaslAuthOp::SaslAuthOp(const Tp::AccountPtr &account,
       m_channel(channel),
       m_saslIface(channel->interface<Tp::Client::ChannelInterfaceSASLAuthenticationInterface>())
 {
+#ifdef HAVE_SSO
+    m_accountStorageId = 0;
+#endif
+
+    //FIXME: We should open the wallet only when required (not required for X-FACEBOOK-PLATFORM)
     connect(KTp::WalletInterface::openWallet(), SIGNAL(finished(Tp::PendingOperation*)), SLOT(onOpenWalletOperationFinished(Tp::PendingOperation*)));
 }
 
@@ -59,33 +72,49 @@ void SaslAuthOp::gotProperties(Tp::PendingOperation *op)
     QStringList mechanisms = qdbus_cast<QStringList>(props.value(QLatin1String("AvailableMechanisms")));
     kDebug() << mechanisms;
 
+    uint status = qdbus_cast<uint>(props.value(QLatin1String("SASLStatus")));
+    QString error = qdbus_cast<QString>(props.value(QLatin1String("SASLError")));
+    QVariantMap errorDetails = qdbus_cast<QVariantMap>(props.value(QLatin1String("SASLErrorDetails")));
+
+#ifdef HAVE_SSO
+    if (mechanisms.contains(QLatin1String("X-FACEBOOK-PLATFORM")) && m_accountStorageId) {
+        XTelepathySSOFacebookOperation *authop = new XTelepathySSOFacebookOperation(m_account, m_accountStorageId, m_saslIface);
+        connect(authop,
+                SIGNAL(finished(Tp::PendingOperation*)),
+                SLOT(onAuthOperationFinished(Tp::PendingOperation*)));
+
+        authop->onSASLStatusChanged(status, error, errorDetails);
+    }
+    else if(mechanisms.contains(QLatin1String("X-OAUTH2")) && m_accountStorageId) {
+        XTelepathySSOGoogleOperation *authop = new XTelepathySSOGoogleOperation(m_account, m_accountStorageId, m_saslIface);
+        connect(authop,
+                SIGNAL(finished(Tp::PendingOperation*)),
+                SLOT(onAuthOperationFinished(Tp::PendingOperation*)));
+
+        authop->onSASLStatusChanged(status, error, errorDetails);
+    } else //if...
+#endif
     if (mechanisms.contains(QLatin1String("X-TELEPATHY-PASSWORD"))) {
-        // everything ok, we can return from handleChannels now
         Q_EMIT ready(this);
         XTelepathyPasswordAuthOperation *authop = new XTelepathyPasswordAuthOperation(m_account, m_saslIface, m_walletInterface, qdbus_cast<bool>(props.value(QLatin1String("CanTryAgain"))));
         connect(authop,
                 SIGNAL(finished(Tp::PendingOperation*)),
                 SLOT(onAuthOperationFinished(Tp::PendingOperation*)));
-        uint status = qdbus_cast<uint>(props.value(QLatin1String("SASLStatus")));
-        QString error = qdbus_cast<QString>(props.value(QLatin1String("SASLError")));
-        QVariantMap errorDetails = qdbus_cast<QVariantMap>(props.value(QLatin1String("SASLErrorDetails")));
+
         authop->onSASLStatusChanged(status, error, errorDetails);
     } else if (mechanisms.contains(QLatin1String("X-MESSENGER-OAUTH2"))) {
-        // everything ok, we can return from handleChannels now
         Q_EMIT ready(this);
         XMessengerOAuth2AuthOperation *authop = new XMessengerOAuth2AuthOperation(m_account, m_saslIface, m_walletInterface);
         connect(authop,
                 SIGNAL(finished(Tp::PendingOperation*)),
                 SLOT(onAuthOperationFinished(Tp::PendingOperation*)));
-        uint status = qdbus_cast<uint>(props.value(QLatin1String("SASLStatus")));
-        QString error = qdbus_cast<QString>(props.value(QLatin1String("SASLError")));
-        QVariantMap errorDetails = qdbus_cast<QVariantMap>(props.value(QLatin1String("SASLErrorDetails")));
+
         authop->onSASLStatusChanged(status, error, errorDetails);
     } else {
-        kWarning() << "X-TELEPATHY-PASSWORD and X-MESSENGER-OAUTH2 are the only supported SASL mechanism and are not available:" << mechanisms;
+        kWarning() << "X-TELEPATHY-PASSWORD, X-MESSENGER-OAUTH2, X-OAUTH2, X-FACEBOOK_PLATFORM are the only supported SASL mechanism and are not available:" << mechanisms;
         m_channel->requestClose();
         setFinishedWithError(TP_QT_ERROR_NOT_IMPLEMENTED,
-                QLatin1String("X-TELEPATHY-PASSWORD and X-MESSENGER-OAUTH2 are the only supported SASL mechanism and are not available"));
+                QLatin1String("X-TELEPATHY-PASSWORD, X-MESSENGER-OAUTH2, X-OAUTH2, X-FACEBOOK_PLATFORM are the only supported SASL mechanism and are not available:"));
         return;
     }
 }
@@ -97,9 +126,11 @@ void SaslAuthOp::onOpenWalletOperationFinished(Tp::PendingOperation *op)
 
     m_walletInterface = walletOp->walletInterface();
 
-    connect(m_saslIface->requestAllProperties(),
-            SIGNAL(finished(Tp::PendingOperation*)),
-            SLOT(gotProperties(Tp::PendingOperation*)));
+#ifdef HAVE_SSO
+    fetchAccountStorage();
+#else
+    setReady();
+#endif
 }
 
 void SaslAuthOp::onAuthOperationFinished(Tp::PendingOperation *op)
@@ -111,5 +142,36 @@ void SaslAuthOp::onAuthOperationFinished(Tp::PendingOperation *op)
         setFinished();
     }
 }
+
+void SaslAuthOp::setReady()
+{
+    connect(m_saslIface->requestAllProperties(),
+            SIGNAL(finished(Tp::PendingOperation*)),
+            SLOT(gotProperties(Tp::PendingOperation*)));
+}
+
+#ifdef HAVE_SSO
+void SaslAuthOp::onGetAccountStorageFetched(Tp::PendingOperation* op)
+{
+    kDebug();
+    Tp::PendingVariantMap *pendingMap = qobject_cast<Tp::PendingVariantMap*>(op);
+
+    m_accountStorageId = pendingMap->result()["StorageIdentifier"].value<QDBusVariant>().variant().toInt();
+    kDebug() << m_accountStorageId;
+
+    setReady();
+}
+
+void SaslAuthOp::fetchAccountStorage()
+{
+    //Check if the account has any StorageIdentifier, in which case we will
+    //prioritize those mechanism related with KDE Accounts integration
+    QScopedPointer<Tp::Client::AccountInterfaceStorageInterface> accountStorageInterface(
+        new Tp::Client::AccountInterfaceStorageInterface(m_account->busName(), m_account->objectPath()));
+
+    Tp::PendingVariantMap *pendingMap = accountStorageInterface->requestAllProperties();
+    connect(pendingMap, SIGNAL(finished(Tp::PendingOperation*)), SLOT(onGetAccountStorageFetched(Tp::PendingOperation*)));
+}
+#endif
 
 #include "sasl-auth-op.moc"
