@@ -4,6 +4,7 @@ ktp-auth-handler (0.6.80-1) UNRELEASED; urgency=low
   * Add handle_no_ossl.patch to prevent a crash when libqca2-plugin-ossl
     isn't available.
   * Import upstream version 0.6.80
+  * Bump Buildp-Depends ktpcommoninternalsprivate-dev to 0.6.80
 
  -- Diane Trout <diane@ghic.org>  Sat, 28 Sep 2013 21:13:41 -0700
 
