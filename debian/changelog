@@ -1,8 +1,8 @@
 ktp-auth-handler (0.7.0-1) UNRELEASED; urgency=low
 
   * Add Suggests: libqca2-plugin-ossl
-  * Import upstream version 0.6.80
-  * Bump Buildp-Depends ktpcommoninternalsprivate-dev to 0.6.80
+  * New upstream version.
+  * Bump Build-Depends ktpcommoninternalsprivate-dev to 0.7.0
 
  -- Diane Trout <diane@ghic.org>  Tue, 29 Oct 2013 21:01:57 -0700
 
