@@ -4,6 +4,7 @@ ktp-auth-handler (0.7.0-1) UNRELEASED; urgency=low
   * New upstream version.
   * Bump Build-Depends ktpcommoninternalsprivate-dev to 0.7.0
   * Bump depends kde-telepathy-data to >= 0.7
+  * Update copyright file
 
  -- Diane Trout <diane@ghic.org>  Tue, 29 Oct 2013 21:01:57 -0700
 
