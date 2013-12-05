@@ -1,4 +1,4 @@
-ktp-auth-handler (0.7.0-1) UNRELEASED; urgency=low
+ktp-auth-handler (0.7.0-1) unstable; urgency=low
 
   * Add Suggests: libqca2-plugin-ossl
   * New upstream version.
@@ -6,7 +6,7 @@ ktp-auth-handler (0.7.0-1) UNRELEASED; urgency=low
   * Bump depends kde-telepathy-data to >= 0.7
   * Update copyright file
 
- -- Diane Trout <diane@ghic.org>  Tue, 29 Oct 2013 21:01:57 -0700
+ -- Diane Trout <diane@ghic.org>  Wed, 04 Dec 2013 21:52:54 -0800
 
 ktp-auth-handler (0.6.3-1) unstable; urgency=low
 
