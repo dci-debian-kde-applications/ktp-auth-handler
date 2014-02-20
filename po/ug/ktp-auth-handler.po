@@ -1,40 +1,38 @@
-# Translation of ktp-auth-handler.po to Brazilian Portuguese
-# Copyright (C) 2011-2013 This_file_is_part_of_KDE
+# Uyghur translation for ktp-auth-handler.
+# Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
+# Gheyret Kenji <gheyret@gmail.com>, YEAR.
 #
-# André Marcelo Alvarenga <alvarenga@kde.org>, 2011, 2012, 2013.
-# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktp-auth-handler\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2013-12-23 01:29+0000\n"
-"PO-Revision-Date: 2013-09-25 08:02-0300\n"
-"Last-Translator: André Marcelo Alvarenga <alvarenga@kde.org>\n"
-"Language-Team: Brazilian Portuguese <kde-i18n-pt_br@kde.org>\n"
-"Language: pt_BR\n"
+"PO-Revision-Date: 2013-09-08 07:04+0900\n"
+"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "André Marcelo Alvarenga"
+msgstr "ئابدۇقادىر ئابلىز, غەيرەت كەنجى"
 
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "alvarenga@kde.org"
+msgstr "sahran.ug@gmail.com,  gheyret@gmail.com"
 
 #: conference-auth-op.cpp:94
 #, kde-format
 msgid "Please provide a password for the chat room %1"
-msgstr "Informe a senha da sala de bate-papo %1"
+msgstr ""
 
 #: main.cpp:48
 msgid "Telepathy Authentication Handler"
-msgstr "Gerenciamento de autenticação do Telepathy"
+msgstr ""
 
 #: main.cpp:50
 msgid "David Edmundson"
@@ -42,7 +40,7 @@ msgstr "David Edmundson"
 
 #: main.cpp:50 main.cpp:51
 msgid "Developer"
-msgstr "Desenvolvedor"
+msgstr "ئىجادىيەتچى"
 
 #: main.cpp:51
 msgid "Daniele E. Domenichelli"
@@ -53,8 +51,6 @@ msgid ""
 "The SSL/TLS support plugin is not available. Certificate validation cannot "
 "be done."
 msgstr ""
-"O plugin de suporte a SSL/TLS não está disponível. Não é possível validar o "
-"certificado."
 
 #: tls-cert-verifier-op.cpp:146
 #, kde-format
@@ -62,64 +58,64 @@ msgid ""
 "The server failed the authenticity check (%1).\n"
 "\n"
 msgstr ""
-"O servidor falhou no teste de autenticidade (%1).\n"
+"مۇلازىمېتىر دەلىللەش تەكشۈرۈشى(%1)دىن ئۆتمىدى\n"
 "\n"
 
 #: tls-cert-verifier-op.cpp:156 tls-cert-verifier-op.cpp:174
 msgid "Server Authentication"
-msgstr "Autenticação do servidor"
+msgstr "مۇلازىمېتىر ئىسپاتنامىسى"
 
 #: tls-cert-verifier-op.cpp:157
 msgid "&Details"
-msgstr "&Detalhes"
+msgstr "تەپسىلاتلار(&D)"
 
 #: tls-cert-verifier-op.cpp:158
 msgid "Co&ntinue"
-msgstr "Co&ntinuar"
+msgstr "داۋاملاشتۇر(&N)"
 
 #: tls-cert-verifier-op.cpp:159
 msgid "&Cancel"
-msgstr "&Cancelar"
+msgstr "ۋاز كەچ(&C)"
 
 #: tls-cert-verifier-op.cpp:171
 msgid ""
 "Would you like to accept this certificate forever without being prompted?"
-msgstr "Deseja sempre aceitar este certificado sem solicitar confirmação?"
+msgstr "بۇ ئىسپاتنامىنى بۇنىڭدىن كېيىن دەخلىسىز مەڭگۈ قوبۇل قىلامسىز؟"
 
 #: tls-cert-verifier-op.cpp:175
 msgid "&Forever"
-msgstr "&Sempre"
+msgstr "مەڭگۈ(&F)"
 
 #: tls-cert-verifier-op.cpp:176
 msgid "&Current Session only"
-msgstr "S&omente nesta sessão"
+msgstr "نۆۋەتتىكى ئەڭگىمەلا(&C)"
 
 #: x-messenger-oauth2-auth-operation.cpp:106
 #: x-telepathy-password-auth-operation.cpp:84
 msgid "Authentication error"
-msgstr "Erro de autenticação"
+msgstr "كىملىك دەلىللەش خاتالىقى"
 
 #: x-messenger-oauth2-auth-operation.cpp:121
 #: x-telepathy-password-auth-operation.cpp:108
 msgid "User cancelled auth"
-msgstr "O usuário cancelou a autenticação"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (KTitleWidget, title)
 #: x-telepathy-password-prompt.ui:45
 msgid "Please Enter Your Account Password"
-msgstr "Indique a senha da sua conta"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: x-telepathy-password-prompt.ui:57
 msgid "Account:"
-msgstr "Conta:"
+msgstr "ھېسابات:"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: x-telepathy-password-prompt.ui:71
 msgid "Password:"
-msgstr "Senha:"
+msgstr "ئىم:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, savePassword)
 #: x-telepathy-password-prompt.ui:85
 msgid "Save Password"
-msgstr "Salvar senha"
+msgstr "ئىم ساقلا"

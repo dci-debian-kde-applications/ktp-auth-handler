@@ -1,6 +1,6 @@
 project(ktp-auth-handler)
 
-set(KTP_AUTH_HANDLER_VERSION "0.7.0")
+set(KTP_AUTH_HANDLER_VERSION "0.7.80")
 
 set (CMAKE_MODULE_PATH
      "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules"
@@ -24,6 +24,11 @@ include (MacroLibrary)
 macro_log_feature(ACCOUNTSQT_FOUND "AccountsQt" "Support for Accounts-SSO" "https://code.google.com/p/accounts-sso/source/checkout?repo=libaccounts-qt" FALSE "" "")
 macro_log_feature(SIGNONQT_FOUND "SignonsQt" "Support for Accounts-SSO" "https://code.google.com/p/accounts-sso/source/checkout?repo=signond" FALSE "" "")
 macro_display_feature_log()
+message("-----------------------------------------------------------------------------")
+message("IMPORTANT: There is a runtime dependency on QCA-OSSL. ")
+message("This project will build, but will fail to run properly. Please ensure it is installed.")
+message("If you are a packager you _must_ mark this as a dependency.")
+message("-----------------------------------------------------------------------------")
 
 add_definitions (${KDE4_DEFINITIONS})
 
