@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-auth-handler\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-25 05:36+0000\n"
+"POT-Creation-Date: 2013-12-23 01:29+0000\n"
 "PO-Revision-Date: 2013-02-10 21:32+0200\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -46,13 +46,13 @@ msgstr "Προγραμματιστής"
 msgid "Daniele E. Domenichelli"
 msgstr "Daniele E. Domenichelli"
 
-#: tls-cert-verifier-op.cpp:99
+#: tls-cert-verifier-op.cpp:102
 msgid ""
 "The SSL/TLS support plugin is not available. Certificate validation cannot "
 "be done."
 msgstr ""
 
-#: tls-cert-verifier-op.cpp:143
+#: tls-cert-verifier-op.cpp:146
 #, kde-format
 msgid ""
 "The server failed the authenticity check (%1).\n"
@@ -61,32 +61,32 @@ msgstr ""
 "Ο εξυπηρετητής απέτυχε στον έλεγχο ταυτοποίησης (%1).\n"
 "\n"
 
-#: tls-cert-verifier-op.cpp:153 tls-cert-verifier-op.cpp:171
+#: tls-cert-verifier-op.cpp:156 tls-cert-verifier-op.cpp:174
 msgid "Server Authentication"
 msgstr "Εξυπηρετητής ταυτοποίησης"
 
-#: tls-cert-verifier-op.cpp:154
+#: tls-cert-verifier-op.cpp:157
 msgid "&Details"
 msgstr "&Λεπτομέρειες"
 
-#: tls-cert-verifier-op.cpp:155
+#: tls-cert-verifier-op.cpp:158
 msgid "Co&ntinue"
 msgstr "Συ&νέχεια"
 
-#: tls-cert-verifier-op.cpp:156
+#: tls-cert-verifier-op.cpp:159
 msgid "&Cancel"
 msgstr "&Ακύρωση"
 
-#: tls-cert-verifier-op.cpp:168
+#: tls-cert-verifier-op.cpp:171
 msgid ""
 "Would you like to accept this certificate forever without being prompted?"
 msgstr "Θέλετε να αποδεχθείτε αυτό το πιστοποιητικό για πάντα χωρίς προτροπή;"
 
-#: tls-cert-verifier-op.cpp:172
+#: tls-cert-verifier-op.cpp:175
 msgid "&Forever"
 msgstr "&Για πάντα"
 
-#: tls-cert-verifier-op.cpp:173
+#: tls-cert-verifier-op.cpp:176
 msgid "&Current Session only"
 msgstr "Για την &τρέχουσα συνεδρία μόνο"
 

@@ -6,9 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-25 05:36+0000\n"
-"PO-Revision-Date: 2013-01-08 10:38+0800\n"
-"Last-Translator: Lê Hoàng Phương <herophuong93@gmail.com>\n"
+"POT-Creation-Date: 2013-12-23 01:29+0000\n"
+"PO-Revision-Date: 2013-04-15 09:27+0800\n"
+"Last-Translator: herop-kde\n"
 "Language-Team: Vietnamese <kde-i18n-vi@kde.org>\n"
 "Language: vi\n"
 "MIME-Version: 1.0\n"
@@ -46,49 +46,49 @@ msgstr "Nhà phát triển"
 msgid "Daniele E. Domenichelli"
 msgstr "Daniele E. Domenichelli"
 
-#: tls-cert-verifier-op.cpp:99
+#: tls-cert-verifier-op.cpp:102
 msgid ""
 "The SSL/TLS support plugin is not available. Certificate validation cannot "
 "be done."
 msgstr ""
 
-#: tls-cert-verifier-op.cpp:143
+#: tls-cert-verifier-op.cpp:146
 #, kde-format
 msgid ""
 "The server failed the authenticity check (%1).\n"
 "\n"
 msgstr ""
+"Kiểm tra xác thực tại máy chủ đã thất bại (%1).\n"
+"\n"
 
-#: tls-cert-verifier-op.cpp:153 tls-cert-verifier-op.cpp:171
-#, fuzzy
-#| msgid "Authentication error"
+#: tls-cert-verifier-op.cpp:156 tls-cert-verifier-op.cpp:174
 msgid "Server Authentication"
-msgstr "Lỗi xác thực"
+msgstr "Xác thực máy chủ"
 
-#: tls-cert-verifier-op.cpp:154
+#: tls-cert-verifier-op.cpp:157
 msgid "&Details"
-msgstr ""
+msgstr "&Chi tiết"
 
-#: tls-cert-verifier-op.cpp:155
+#: tls-cert-verifier-op.cpp:158
 msgid "Co&ntinue"
-msgstr ""
+msgstr "&Tiếp tục"
 
-#: tls-cert-verifier-op.cpp:156
+#: tls-cert-verifier-op.cpp:159
 msgid "&Cancel"
-msgstr ""
+msgstr "&Hủy"
 
-#: tls-cert-verifier-op.cpp:168
+#: tls-cert-verifier-op.cpp:171
 msgid ""
 "Would you like to accept this certificate forever without being prompted?"
-msgstr ""
+msgstr "Bạn có muốn tự động chấp nhận chứng chỉ này?"
 
-#: tls-cert-verifier-op.cpp:172
+#: tls-cert-verifier-op.cpp:175
 msgid "&Forever"
-msgstr ""
+msgstr "&Mãi mãi"
 
-#: tls-cert-verifier-op.cpp:173
+#: tls-cert-verifier-op.cpp:176
 msgid "&Current Session only"
-msgstr ""
+msgstr "&Chỉ phiên hiện tại"
 
 #: x-messenger-oauth2-auth-operation.cpp:106
 #: x-telepathy-password-auth-operation.cpp:84
