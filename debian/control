@@ -8,7 +8,7 @@ Build-Depends: debhelper (>= 9),
  libtelepathy-qt4-dev (>= 0.9.0),
  kdelibs5-dev (>= 4:4.6),
  cmake (>= 2.8),
- libktpcommoninternalsprivate-dev (>= 0.7.0),
+ libktpcommoninternalsprivate-dev (>= 0.7.80),
  libqtwebkit-dev,
  libqjson-dev,
  libqca2-dev
@@ -19,7 +19,7 @@ Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/kde-telepath
 
 Package: kde-telepathy-auth-handler
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, kde-telepathy-data (>= 0.7)
+Depends: ${shlibs:Depends}, ${misc:Depends}, kde-telepathy-data (>= 0.7.80)
 Recommends: kde-telepathy
 Suggests: libqca2-plugin-ossl
 Description: KDE Telepathy authentication handler
