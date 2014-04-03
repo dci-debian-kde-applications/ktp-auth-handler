@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-auth-handler\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-12-23 01:29+0000\n"
+"POT-Creation-Date: 2013-09-25 05:36+0000\n"
 "PO-Revision-Date: 2013-09-25 09:50+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -42,7 +42,7 @@ msgstr "Desenvolvimento"
 msgid "Daniele E. Domenichelli"
 msgstr "Daniele E. Domenichelli"
 
-#: tls-cert-verifier-op.cpp:102
+#: tls-cert-verifier-op.cpp:99
 msgid ""
 "The SSL/TLS support plugin is not available. Certificate validation cannot "
 "be done."
@@ -50,7 +50,7 @@ msgstr ""
 "O 'plugin' de suporte para SSL/TLS não está disponível. Não é possível "
 "efectuar a validação do certificado."
 
-#: tls-cert-verifier-op.cpp:146
+#: tls-cert-verifier-op.cpp:143
 #, kde-format
 msgid ""
 "The server failed the authenticity check (%1).\n"
@@ -59,32 +59,32 @@ msgstr ""
 "O certificado do servidor não passou o teste de autenticidade (%1).\n"
 "\n"
 
-#: tls-cert-verifier-op.cpp:156 tls-cert-verifier-op.cpp:174
+#: tls-cert-verifier-op.cpp:153 tls-cert-verifier-op.cpp:171
 msgid "Server Authentication"
 msgstr "Autenticação do Servidor"
 
-#: tls-cert-verifier-op.cpp:157
+#: tls-cert-verifier-op.cpp:154
 msgid "&Details"
 msgstr "&Detalhes"
 
-#: tls-cert-verifier-op.cpp:158
+#: tls-cert-verifier-op.cpp:155
 msgid "Co&ntinue"
 msgstr "Co&ntinuar"
 
-#: tls-cert-verifier-op.cpp:159
+#: tls-cert-verifier-op.cpp:156
 msgid "&Cancel"
 msgstr "&Cancelar"
 
-#: tls-cert-verifier-op.cpp:171
+#: tls-cert-verifier-op.cpp:168
 msgid ""
 "Would you like to accept this certificate forever without being prompted?"
 msgstr "Quer aceitar este certificado sempre, sem que seja notificado?"
 
-#: tls-cert-verifier-op.cpp:175
+#: tls-cert-verifier-op.cpp:172
 msgid "&Forever"
 msgstr "&Sempre"
 
-#: tls-cert-verifier-op.cpp:176
+#: tls-cert-verifier-op.cpp:173
 msgid "&Current Session only"
 msgstr "Só na Sessão A&ctual"
 
@@ -117,3 +117,9 @@ msgstr "Senha:"
 #: x-telepathy-password-prompt.ui:85
 msgid "Save Password"
 msgstr "Guardar a Senha"
+
+#~ msgid "Accept this certificate from <b>%1?</b><br />%2<br />"
+#~ msgstr "Deseja aceitar este certificado de <b>%1</b>?<br />%2<br />"
+
+#~ msgid "Untrusted certificate"
+#~ msgstr "Certificado não-fidedigno"

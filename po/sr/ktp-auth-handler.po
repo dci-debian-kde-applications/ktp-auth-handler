@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-auth-handler\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-12-23 01:29+0000\n"
+"POT-Creation-Date: 2013-09-25 05:36+0000\n"
 "PO-Revision-Date: 2013-09-29 16:31+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -48,7 +48,7 @@ msgstr "Програмер"
 msgid "Daniele E. Domenichelli"
 msgstr "Данијеле Доменичели"
 
-#: tls-cert-verifier-op.cpp:102
+#: tls-cert-verifier-op.cpp:99
 msgid ""
 "The SSL/TLS support plugin is not available. Certificate validation cannot "
 "be done."
@@ -56,7 +56,7 @@ msgstr ""
 "Прикључак за подршку ССЛ‑а/ТЛС‑а није доступан. Сертификати не могу да се "
 "оверавају."
 
-#: tls-cert-verifier-op.cpp:146
+#: tls-cert-verifier-op.cpp:143
 #, kde-format
 msgid ""
 "The server failed the authenticity check (%1).\n"
@@ -65,32 +65,32 @@ msgstr ""
 "Сервер није прошао аутентификацију (%1).\n"
 "\n"
 
-#: tls-cert-verifier-op.cpp:156 tls-cert-verifier-op.cpp:174
+#: tls-cert-verifier-op.cpp:153 tls-cert-verifier-op.cpp:171
 msgid "Server Authentication"
 msgstr "Аутентификација сервера"
 
-#: tls-cert-verifier-op.cpp:157
+#: tls-cert-verifier-op.cpp:154
 msgid "&Details"
 msgstr "&Детаљи"
 
-#: tls-cert-verifier-op.cpp:158
+#: tls-cert-verifier-op.cpp:155
 msgid "Co&ntinue"
 msgstr "&Настави"
 
-#: tls-cert-verifier-op.cpp:159
+#: tls-cert-verifier-op.cpp:156
 msgid "&Cancel"
 msgstr "&Одустани"
 
-#: tls-cert-verifier-op.cpp:171
+#: tls-cert-verifier-op.cpp:168
 msgid ""
 "Would you like to accept this certificate forever without being prompted?"
 msgstr "Желите ли да прихватите овај сертификат заувек, без даљег питања?"
 
-#: tls-cert-verifier-op.cpp:175
+#: tls-cert-verifier-op.cpp:172
 msgid "&Forever"
 msgstr "&Заувек"
 
-#: tls-cert-verifier-op.cpp:176
+#: tls-cert-verifier-op.cpp:173
 msgid "&Current Session only"
 msgstr "&Само за текућу сесију"
 
