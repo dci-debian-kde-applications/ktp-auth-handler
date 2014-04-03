@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-12-23 01:29+0000\n"
+"POT-Creation-Date: 2013-09-25 05:36+0000\n"
 "PO-Revision-Date: 2013-09-27 04:06+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -48,13 +48,13 @@ msgstr "Құрастырушы"
 msgid "Daniele E. Domenichelli"
 msgstr "Daniele E. Domenichelli"
 
-#: tls-cert-verifier-op.cpp:102
+#: tls-cert-verifier-op.cpp:99
 msgid ""
 "The SSL/TLS support plugin is not available. Certificate validation cannot "
 "be done."
 msgstr "SSL/TLS протоколын қолдау плагині жоқ. Куәлік растауға келмейді."
 
-#: tls-cert-verifier-op.cpp:146
+#: tls-cert-verifier-op.cpp:143
 #, kde-format
 msgid ""
 "The server failed the authenticity check (%1).\n"
@@ -63,32 +63,32 @@ msgstr ""
 "Сервер шындылық тексеруден өткен жоқ (%1).\n"
 "\n"
 
-#: tls-cert-verifier-op.cpp:156 tls-cert-verifier-op.cpp:174
+#: tls-cert-verifier-op.cpp:153 tls-cert-verifier-op.cpp:171
 msgid "Server Authentication"
 msgstr "Сервер аутентификациясы"
 
-#: tls-cert-verifier-op.cpp:157
+#: tls-cert-verifier-op.cpp:154
 msgid "&Details"
 msgstr "&Егжей-тегжейі"
 
-#: tls-cert-verifier-op.cpp:158
+#: tls-cert-verifier-op.cpp:155
 msgid "Co&ntinue"
 msgstr "Жа&лғастыру"
 
-#: tls-cert-verifier-op.cpp:159
+#: tls-cert-verifier-op.cpp:156
 msgid "&Cancel"
 msgstr "Қ&айту"
 
-#: tls-cert-verifier-op.cpp:171
+#: tls-cert-verifier-op.cpp:168
 msgid ""
 "Would you like to accept this certificate forever without being prompted?"
 msgstr "Куәлік келешекте қосымша сұрақсыз үнемі қабылдансын ба?"
 
-#: tls-cert-verifier-op.cpp:175
+#: tls-cert-verifier-op.cpp:172
 msgid "&Forever"
 msgstr "&Үнемі"
 
-#: tls-cert-verifier-op.cpp:176
+#: tls-cert-verifier-op.cpp:173
 msgid "&Current Session only"
 msgstr "Тек &осы сеанс үшін"
 

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-12-23 01:29+0000\n"
-"PO-Revision-Date: 2013-09-26 15:35+0800\n"
+"POT-Creation-Date: 2013-09-25 05:36+0000\n"
+"PO-Revision-Date: 2013-10-03 15:05+0800\n"
 "Last-Translator: Franklin Weng <franklin at goodhorse dot idv dot tw>\n"
 "Language-Team: Chinese Traditional <kde-tw@googlegroups.com>\n"
 "Language: zh_TW\n"
@@ -23,7 +23,7 @@ msgstr "Frank Weng (a.k.a. Franklin)"
 
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "franklin@goodhorse.idv.tw"
+msgstr "franklin at goodhorse dot idv dot tw"
 
 #: conference-auth-op.cpp:94
 #, kde-format
@@ -46,13 +46,13 @@ msgstr "開發者"
 msgid "Daniele E. Domenichelli"
 msgstr "Daniele E. Domenichelli"
 
-#: tls-cert-verifier-op.cpp:102
+#: tls-cert-verifier-op.cpp:99
 msgid ""
 "The SSL/TLS support plugin is not available. Certificate validation cannot "
 "be done."
-msgstr "沒有 SSL/TLS 支援外掛程式。無法確認憑證。"
+msgstr "無法取得 SSL/TLS 支援外掛程式。無法完成憑證的確認。"
 
-#: tls-cert-verifier-op.cpp:146
+#: tls-cert-verifier-op.cpp:143
 #, kde-format
 msgid ""
 "The server failed the authenticity check (%1).\n"
@@ -61,32 +61,32 @@ msgstr ""
 "此伺服器憑證未能通過認證測試 (%1)。\n"
 "\n"
 
-#: tls-cert-verifier-op.cpp:156 tls-cert-verifier-op.cpp:174
+#: tls-cert-verifier-op.cpp:153 tls-cert-verifier-op.cpp:171
 msgid "Server Authentication"
 msgstr "伺服端認證"
 
-#: tls-cert-verifier-op.cpp:157
+#: tls-cert-verifier-op.cpp:154
 msgid "&Details"
 msgstr "詳細資料(&D)"
 
-#: tls-cert-verifier-op.cpp:158
+#: tls-cert-verifier-op.cpp:155
 msgid "Co&ntinue"
 msgstr "繼續(&N)"
 
-#: tls-cert-verifier-op.cpp:159
+#: tls-cert-verifier-op.cpp:156
 msgid "&Cancel"
 msgstr "取消(&C)"
 
-#: tls-cert-verifier-op.cpp:171
+#: tls-cert-verifier-op.cpp:168
 msgid ""
 "Would you like to accept this certificate forever without being prompted?"
 msgstr "您希望以後不提示就接受該憑證嗎？"
 
-#: tls-cert-verifier-op.cpp:175
+#: tls-cert-verifier-op.cpp:172
 msgid "&Forever"
 msgstr "永遠(&F)"
 
-#: tls-cert-verifier-op.cpp:176
+#: tls-cert-verifier-op.cpp:173
 msgid "&Current Session only"
 msgstr "只用於目前的工作階段(&C)"
 
