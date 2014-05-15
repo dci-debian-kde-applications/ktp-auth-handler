@@ -8,19 +8,13 @@ Files: *
 Copyright: 2011 Collabora Ltd. <http://www.collabora.co.uk>
            2011 David Edmundson <kde@davidedmundson.co.uk>
            2011-2012 Daniele E. Domenichelli <daniele.domenichelli@gmail.com>
+           2013 Alejandro Fiestas Olivares <afiestas@kde.org>
 License: LGPL-2.1+
 
 Files: x-telepathy-sso-facebook-operation.cpp
        x-telepathy-sso-facebook-operation.h
 Copyright: 2013  David Edmundson <kde@davidedmundson.co.uk>
 License: GPL-3+
-
-Files: getcredentialsjob.cpp
-       getcredentialsjob.h
-       x-telepathy-sso-google-operation.cpp
-       x-telepathy-sso-google-operation.h
-Copyright: 2013 by Alejandro Fiestas Olivares <afiestas@kde.org>
-License: LGPL-2+
 
 Files: kssl/*
 Copyright: 2007, 2008, 2010 Andreas Hartmetz <ahartmetz@gmail.com>
@@ -42,7 +36,7 @@ Copyright: 2012 Mladen Pejakovic <pejakm@gmail.com>
            2011-2012 Frederik Schwarzer <schwarzer@kde.org>
            2011 Manfred Wiese <m.j.wiese@web.de>
            2012 Franklin Weng <franklin@mail.everfocus.com.tw>
-           2011-2012 Stefan Asserhall <stefan.asserhall@comhem.se>
+           2011-2013 Stefan Asserhall <stefan.asserhall@comhem.se>
            2012 Freek de Kruijf <freekdekruijf@kde.nl>
            2011-2012 Kira J. Fernández <kirajfdez@gmail.com>
            2012 Marek Laane <bald@smail.ee>
@@ -54,7 +48,8 @@ Copyright: 2012 Mladen Pejakovic <pejakm@gmail.com>
            2012 Ni Hui <shuizhuyuanluo@126.com>
            2011-2012 Martin Schlander <mschlander@opensuse.org>
            2012 Xosé <xosecalvo@gmail.com>
-           2012 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+           2012-2014 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+           2014 Park Shinjo <peremen@gmail.com>
 License: LGPL-2.1+
 
 Files: cmake/*
