@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Vít Pelčák <vit@pelcak.org>, 2011, 2012, 2013.
+# Vít Pelčák <vit@pelcak.org>, 2011, 2012, 2013, 2014.
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2012, 2013.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-12 05:55+0000\n"
-"PO-Revision-Date: 2013-09-25 14:25+0200\n"
+"PO-Revision-Date: 2014-08-25 13:03+0200\n"
 "Last-Translator: Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -29,7 +29,7 @@ msgstr "vit@pelcak.org, tomas.chvatal@gmail.com"
 #: conference-auth-op.cpp:94
 #, kde-format
 msgid "Please provide a password for the chat room %1"
-msgstr "Prosím zadejte heslo pro místnost %1"
+msgstr "Prosím, zadejte heslo pro místnost %1"
 
 #: main.cpp:48
 msgid "Telepathy Authentication Handler"
@@ -104,7 +104,7 @@ msgstr "Uživatelem přerušené ověření"
 #. i18n: ectx: property (text), widget (KTitleWidget, title)
 #: x-telepathy-password-prompt.ui:45
 msgid "Please Enter Your Account Password"
-msgstr "Prosím zadejte heslo k vašemu účtu"
+msgstr "Prosím, zadejte heslo k vašemu účtu"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: x-telepathy-password-prompt.ui:57
