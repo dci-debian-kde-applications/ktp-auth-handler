@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Marek Laane <bald@smail.ee>, 2012.
+# Marek Laane <bald@smail.ee>, 2012, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-12 05:55+0000\n"
-"PO-Revision-Date: 2012-12-10 11:36+0200\n"
+"PO-Revision-Date: 2014-06-13 14:03+0300\n"
 "Last-Translator: Marek Laane <bald@smail.ee>\n"
 "Language-Team: Estonian <kde-et@linux.ee>\n"
 "Language: et\n"
@@ -51,6 +51,8 @@ msgid ""
 "The SSL/TLS support plugin is not available. Certificate validation cannot "
 "be done."
 msgstr ""
+"SSL/TLS toetuse pluginat pole saadaval. Sertifikaadi õigsust ei saa "
+"kontrollida."
 
 #: tls-cert-verifier-op.cpp:146
 #, kde-format
@@ -58,36 +60,37 @@ msgid ""
 "The server failed the authenticity check (%1).\n"
 "\n"
 msgstr ""
+"Server ei läbinud autentsuse testi (%1)\n"
+"\n"
 
 #: tls-cert-verifier-op.cpp:156 tls-cert-verifier-op.cpp:174
-#, fuzzy
 msgid "Server Authentication"
-msgstr "Autentimise tõrge"
+msgstr "Serveri autentimine"
 
 #: tls-cert-verifier-op.cpp:157
 msgid "&Details"
-msgstr ""
+msgstr "Üksikasja&d"
 
 #: tls-cert-verifier-op.cpp:158
 msgid "Co&ntinue"
-msgstr ""
+msgstr "&Jätka"
 
 #: tls-cert-verifier-op.cpp:159
 msgid "&Cancel"
-msgstr ""
+msgstr "&Loobu"
 
 #: tls-cert-verifier-op.cpp:171
 msgid ""
 "Would you like to accept this certificate forever without being prompted?"
-msgstr ""
+msgstr "Kas aktsepteerida seda sertifikaati tulevikus ilma küsimata?"
 
 #: tls-cert-verifier-op.cpp:175
 msgid "&Forever"
-msgstr ""
+msgstr "&Jah"
 
 #: tls-cert-verifier-op.cpp:176
 msgid "&Current Session only"
-msgstr ""
+msgstr "&Ainult käesolevas seansis"
 
 #: x-messenger-oauth2-auth-operation.cpp:106
 #: x-telepathy-password-auth-operation.cpp:84
