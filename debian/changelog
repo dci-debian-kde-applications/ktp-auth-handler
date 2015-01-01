@@ -1,7 +1,7 @@
 ktp-auth-handler (0.9.0-1) UNRELEASED; urgency=medium
 
   * New upstream release.
-  * Update build-depends ktpcommoninteranslprivate-dev to 0.8.80
+  * Update build-depends ktpcommoninteranslprivate-dev to 0.9.0
   * Update kde-telepathy-data version to be set by source:Upstream-Version
 
  -- Diane Trout <diane@ghic.org>  Sat, 20 Sep 2014 20:26:22 -0700
