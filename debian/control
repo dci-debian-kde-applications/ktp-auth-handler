@@ -27,9 +27,7 @@ Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/applications/ktp-auth-h
 
 Package: kde-telepathy-auth-handler
 Architecture: any
-Depends: kde-telepathy-data (>= ${source:Upstream-Version}),
-         ${misc:Depends},
-         ${shlibs:Depends}
+Depends: kde-telepathy-data, ${misc:Depends}, ${shlibs:Depends}
 Recommends: kde-telepathy
 Suggests: libqca-qt5-2-plugins
 Description: KDE Telepathy authentication handler
