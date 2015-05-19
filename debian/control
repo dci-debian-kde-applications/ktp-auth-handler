@@ -2,16 +2,31 @@ Source: ktp-auth-handler
 Section: kde
 Priority: optional
 Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
-Uploaders: Diane Trout <diane@ghic.org>, Michał Zając <quintasan@kubuntu.org>, Mark Purcell <msp@debian.org>
-Build-Depends: debhelper (>= 9),
- pkg-kde-tools (>= 0.9),
- libtelepathy-qt4-dev (>= 0.9.0),
- kdelibs5-dev (>= 4:4.6),
- cmake (>= 2.8),
- libktpcommoninternalsprivate-dev (>= 0.8.80),
- libqtwebkit-dev,
- libqjson-dev,
- libqca2-dev
+Uploaders: Diane Trout <diane@ghic.org>,
+           Michał Zając <quintasan@kubuntu.org>,
+           Mark Purcell <msp@debian.org>
+Build-Depends: cmake (>= 2.8.12~),
+               debhelper (>= 9),
+               extra-cmake-modules (>= 0.0.11~),
+               kdelibs5-dev (>= 4:4.6),
+               kio-dev (>= 5.0~),
+               libaccounts-qt5-dev (>= 1.10~),
+               libkaccounts-dev,
+               libkf5i18n-dev (>= 5.0~),
+               libkf5wallet-dev (>= 5.0~),
+               libkf5webkit-dev (>= 5.0~),
+               libkf5widgetsaddons-dev (>= 5.0~),
+               libktp-dev,
+               libktpcommoninternalsprivate-dev (>= 0.8.80),
+               libqca-qt5-2-dev,
+               libqca2-dev,
+               libqjson-dev,
+               libqtwebkit-dev,
+               libsignon-qt5-dev (>= 8.55~),
+               libtelepathy-qt4-dev (>= 0.9.0),
+               libtelepathy-qt5-dev (>= 0.8.9~),
+               pkg-kde-tools (>= 0.9),
+               qtbase5-dev (>= 5.3~)
 Standards-Version: 3.9.5
 Homepage: https://projects.kde.org/projects/extragear/network/telepathy/ktp-auth-handler
 Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-extras/kde-telepathy/ktp-auth-handler.git
@@ -19,7 +34,9 @@ Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/kde-telepath
 
 Package: kde-telepathy-auth-handler
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, kde-telepathy-data (>= ${source:Upstream-Version})
+Depends: kde-telepathy-data (>= ${source:Upstream-Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Recommends: kde-telepathy
 Suggests: libqca2-plugin-ossl
 Description: KDE Telepathy authentication handler
