@@ -26,7 +26,7 @@ Build-Depends: cmake (>= 2.8.12~),
                libtelepathy-qt4-dev (>= 0.9.0),
                libtelepathy-qt5-dev (>= 0.8.9~),
                pkg-kde-tools (>= 0.9),
-               qtbase5-dev (>= 5.3~)
+               qtbase5-dev (>= 5.4)
 Standards-Version: 3.9.5
 Homepage: https://projects.kde.org/projects/extragear/network/telepathy/ktp-auth-handler
 Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-extras/kde-telepathy/ktp-auth-handler.git
