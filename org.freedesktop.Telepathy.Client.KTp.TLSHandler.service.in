@@ -1,3 +1,0 @@
-[D-BUS Service]
-Name=org.freedesktop.Telepathy.Client.KTp.TLSHandler
-Exec=@LIBEXEC_INSTALL_DIR@/ktp-auth-handler
