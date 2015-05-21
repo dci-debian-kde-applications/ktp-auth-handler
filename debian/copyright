@@ -57,7 +57,6 @@ Copyright: 2012 Mladen Pejakovic <pejakm@gmail.com>
 	   2013-2014 Giovanni Sora <g.sora@tiscali.it>
 	   2013-2014 Andrej Mernik <andrejm@ubuntu.si>
 	   2014 Steve Allewell <steve.allewell@gmail.com>
-	   
 License: LGPL-2.1+
 
 Files: cmake/*
