@@ -18,11 +18,11 @@
 
 #include "conference-auth-op.h"
 #include "x-telepathy-password-auth-operation.h"
-#include "x-messenger-oauth2-auth-operation.h"
 
 #include <TelepathyQt/PendingVariantMap>
 
-#include <KDebug>
+#include <QDebug>
+
 #include <KLocalizedString>
 #include <KPasswordDialog>
 
@@ -51,7 +51,7 @@ void ConferenceAuthOp::onOpenWalletOperationFinished(Tp::PendingOperation *op)
 
     m_walletInterface = walletOp->walletInterface();
 
-    kDebug() << "Wallet is open :" << m_walletInterface->isOpen();
+    qDebug() << "Wallet is open :" << m_walletInterface->isOpen();
 
     QDBusPendingReply<uint> reply = m_passwordIface->GetPasswordFlags();
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
@@ -64,7 +64,7 @@ void ConferenceAuthOp::passwordFlagOperationFinished(QDBusPendingCallWatcher *wa
 {
     QDBusPendingReply<uint> reply = *watcher;
     if (reply.isError()) {
-        kWarning() << "Reply is a error. ABORT!";
+        qWarning() << "Reply is a error. ABORT!";
         return;
     }
 
@@ -110,9 +110,7 @@ void ConferenceAuthOp::onPasswordProvided(QDBusPendingCallWatcher *watcher)
         m_walletInterface->setEntry(m_account,m_channel->targetId(), m_password);
         setFinished();
     } else {
-        kDebug() << "Password was incorrect, enter again";
+        qDebug() << "Password was incorrect, enter again";
         passwordDialog();
     }
 }
-
-#include "conference-auth-op.moc"
