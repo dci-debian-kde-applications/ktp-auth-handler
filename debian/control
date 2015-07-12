@@ -5,13 +5,20 @@ Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
 Uploaders: Diane Trout <diane@ghic.org>, Michał Zając <quintasan@kubuntu.org>, Mark Purcell <msp@debian.org>
 Build-Depends: debhelper (>= 9),
  pkg-kde-tools (>= 0.9),
- libtelepathy-qt4-dev (>= 0.9.0),
- kdelibs5-dev (>= 4:4.6),
  cmake (>= 2.8),
- libktpcommoninternalsprivate-dev (>= 0.9.0),
- libqtwebkit-dev,
- libqjson-dev,
- libqca2-dev
+ extra-cmake-modules (>= 0.0.11),
+ qtbase5-dev,
+ kio-dev,
+ libaccounts-qt5-dev (>= 1.10),
+ libkaccounts-dev,
+ libkf5i18n-dev,
+ libkf5wallet-dev,
+ libkf5webkit-dev,
+ libkf5widgetsaddons-dev,
+ libktpcommoninternals-dev (>= 15.04),
+ libtelepathy-qt5-dev (>= 0.9.0),
+ libqca-qt5-2-dev,
+ libsignon-qt5-dev (>= 8.55),
 Standards-Version: 3.9.6
 Homepage: https://projects.kde.org/projects/kde/kdenetwork/ktp-auth-handler
 Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-extras/kde-telepathy/ktp-auth-handler.git
