@@ -7,6 +7,7 @@ ktp-auth-handler (15.04.3-1) UNRELEASED; urgency=medium
     (Move to Qt5 versions and list specific kf5 modules).
   * Update copyright file. (Translations are in a new package).
   * Update kde-telepathy-auth-handler for new KF5 locations.
+  * Use --fail-missing to make it easier to find not installed files.
 
  -- Diane Trout <diane@ghic.org>  Wed, 27 May 2015 22:57:29 -0700
 
