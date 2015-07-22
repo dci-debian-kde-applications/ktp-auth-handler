@@ -9,6 +9,10 @@ ktp-auth-handler (15.04.3-1) UNRELEASED; urgency=medium
   * Update kde-telepathy-auth-handler for new KF5 locations.
   * Use --fail-missing to make it easier to find not installed files.
   * Update for rename of ktpcommoninternalsprivate-dev to libktp-dev
+  * Use dhmk from pkg-kde-tools to build ktp.
+    - Change maintainer to debian-qt-kde
+    - Update debian/rules
+    - Update plugins path to qt5/plugins.
 
  -- Diane Trout <diane@ghic.org>  Wed, 27 May 2015 22:57:29 -0700
 
