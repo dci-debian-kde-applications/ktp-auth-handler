@@ -13,6 +13,7 @@ ktp-auth-handler (15.04.3-1) UNRELEASED; urgency=medium
     - Change maintainer to debian-qt-kde
     - Update debian/rules
     - Update plugins path to qt5/plugins.
+  * Add KDE's unstable download url to watch file
 
  -- Diane Trout <diane@ghic.org>  Wed, 27 May 2015 22:57:29 -0700
 
