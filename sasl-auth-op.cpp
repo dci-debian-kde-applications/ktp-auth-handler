@@ -21,7 +21,6 @@
 #include "sasl-auth-op.h"
 
 #include "x-telepathy-password-auth-operation.h"
-#include "x-telepathy-sso-facebook-operation.h"
 #include "x-telepathy-sso-google-operation.h"
 
 #include <QtCore/QScopedPointer>
@@ -38,11 +37,13 @@ SaslAuthOp::SaslAuthOp(const Tp::AccountPtr &account,
       m_channel(channel),
       m_saslIface(channel->interface<Tp::Client::ChannelInterfaceSASLAuthenticationInterface>())
 {
-    KSharedConfigPtr config = KSharedConfig::openConfig(QStringLiteral("kaccounts-ktprc"));
-    KConfigGroup ktpKaccountsGroup = config->group(QStringLiteral("ktp-kaccounts"));
-    m_kaccountsId = ktpKaccountsGroup.readEntry(account->objectPath()).toUInt();
+    //Check if the account has any StorageIdentifier, in which case we will
+    //prioritize those mechanism related with KDE Accounts integration
+    QScopedPointer<Tp::Client::AccountInterfaceStorageInterface> accountStorageInterface(
+        new Tp::Client::AccountInterfaceStorageInterface(m_account->busName(), m_account->objectPath()));
 
-    setReady();
+    Tp::PendingVariantMap *pendingMap = accountStorageInterface->requestAllProperties();
+    connect(pendingMap, SIGNAL(finished(Tp::PendingOperation*)), SLOT(onGetAccountStorageFetched(Tp::PendingOperation*)));
 }
 
 SaslAuthOp::~SaslAuthOp()
@@ -67,17 +68,9 @@ void SaslAuthOp::gotProperties(Tp::PendingOperation *op)
     QString error = qdbus_cast<QString>(props.value(QLatin1String("SASLError")));
     QVariantMap errorDetails = qdbus_cast<QVariantMap>(props.value(QLatin1String("SASLErrorDetails")));
 
-    if (mechanisms.contains(QLatin1String("X-FACEBOOK-PLATFORM")) && m_kaccountsId != 0) {
-        qDebug() << "Starting Facebook OAuth auth";
-        XTelepathySSOFacebookOperation *authop = new XTelepathySSOFacebookOperation(m_account, m_kaccountsId, m_saslIface);
-        connect(authop,
-                SIGNAL(finished(Tp::PendingOperation*)),
-                SLOT(onAuthOperationFinished(Tp::PendingOperation*)));
-
-        authop->onSASLStatusChanged(status, error, errorDetails);
-    } else if (mechanisms.contains(QLatin1String("X-OAUTH2")) && m_kaccountsId != 0) {
+    if (mechanisms.contains(QLatin1String("X-OAUTH2"))) {
         qDebug() << "Starting X-OAuth2 auth";
-        XTelepathySSOGoogleOperation *authop = new XTelepathySSOGoogleOperation(m_account, m_kaccountsId, m_saslIface);
+        XTelepathySSOGoogleOperation *authop = new XTelepathySSOGoogleOperation(m_account, m_accountStorageId, m_saslIface);
         connect(authop,
                 SIGNAL(finished(Tp::PendingOperation*)),
                 SLOT(onAuthOperationFinished(Tp::PendingOperation*)));
@@ -86,17 +79,17 @@ void SaslAuthOp::gotProperties(Tp::PendingOperation *op)
     } else if (mechanisms.contains(QLatin1String("X-TELEPATHY-PASSWORD"))) {
         qDebug() << "Starting Password auth";
         Q_EMIT ready(this);
-        XTelepathyPasswordAuthOperation *authop = new XTelepathyPasswordAuthOperation(m_account, m_saslIface, qdbus_cast<bool>(props.value(QLatin1String("CanTryAgain"))));
+        XTelepathyPasswordAuthOperation *authop = new XTelepathyPasswordAuthOperation(m_account, m_accountStorageId, m_saslIface, qdbus_cast<bool>(props.value(QLatin1String("CanTryAgain"))));
         connect(authop,
                 SIGNAL(finished(Tp::PendingOperation*)),
                 SLOT(onAuthOperationFinished(Tp::PendingOperation*)));
 
         authop->onSASLStatusChanged(status, error, errorDetails);
     } else {
-        qWarning() << "X-TELEPATHY-PASSWORD, X-OAUTH2, X-FACEBOOK_PLATFORM are the only supported SASL mechanism and are not available:" << mechanisms;
+        qWarning() << "X-TELEPATHY-PASSWORD, X-OAUTH2 are the only supported SASL mechanism and are not available:" << mechanisms;
         m_channel->requestClose();
         setFinishedWithError(TP_QT_ERROR_NOT_IMPLEMENTED,
-                QLatin1String("X-TELEPATHY-PASSWORD, X-OAUTH2, X-FACEBOOK_PLATFORM are the only supported SASL mechanism and are not available:"));
+                QLatin1String("X-TELEPATHY-PASSWORD, X-OAUTH2 are the only supported SASL mechanism and are not available:"));
         return;
     }
 }
@@ -116,4 +109,14 @@ void SaslAuthOp::setReady()
     connect(m_saslIface->requestAllProperties(),
             SIGNAL(finished(Tp::PendingOperation*)),
             SLOT(gotProperties(Tp::PendingOperation*)));
+}
+
+void SaslAuthOp::onGetAccountStorageFetched(Tp::PendingOperation* op)
+{
+    Tp::PendingVariantMap *pendingMap = qobject_cast<Tp::PendingVariantMap*>(op);
+
+    m_accountStorageId = pendingMap->result()["StorageIdentifier"].value<QDBusVariant>().variant().toInt();
+    qDebug() << m_accountStorageId;
+
+    setReady();
 }
