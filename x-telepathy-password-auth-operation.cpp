@@ -39,13 +39,15 @@
 
 XTelepathyPasswordAuthOperation::XTelepathyPasswordAuthOperation(
         const Tp::AccountPtr &account,
+        int accountStorageId,
         Tp::Client::ChannelInterfaceSASLAuthenticationInterface *saslIface,
         bool canTryAgain) :
     Tp::PendingOperation(account),
     m_account(account),
     m_saslIface(saslIface),
     m_canTryAgain(canTryAgain),
-    m_canFinish(false)
+    m_canFinish(false),
+    m_accountStorageId(accountStorageId)
 {
     connect(m_saslIface,
             SIGNAL(SASLStatusChanged(uint,QString,QVariantMap)),
@@ -53,9 +55,6 @@ XTelepathyPasswordAuthOperation::XTelepathyPasswordAuthOperation(
 
     m_config = KSharedConfig::openConfig(QStringLiteral("kaccounts-ktprc"));
     m_lastLoginFailedConfig = m_config->group(QStringLiteral("lastLoginFailed"));
-
-    KConfigGroup kaccountsGroup = m_config->group(QStringLiteral("ktp-kaccounts"));
-    m_kaccountsId = kaccountsGroup.readEntry(m_account->objectPath(), 0);
 }
 
 XTelepathyPasswordAuthOperation::~XTelepathyPasswordAuthOperation()
@@ -70,8 +69,8 @@ void XTelepathyPasswordAuthOperation::onSASLStatusChanged(uint status, const QSt
         // if we have non-null id AND if the last attempt didn't fail,
         // proceed with the credentials receieved from the SSO;
         // otherwise prompt the user
-        if (m_kaccountsId != 0 && !m_lastLoginFailedConfig.hasKey(m_account->objectPath())) {
-            GetCredentialsJob *credentialsJob = new GetCredentialsJob(m_kaccountsId, this);
+        if (!m_lastLoginFailedConfig.hasKey(m_account->objectPath())) {
+            GetCredentialsJob *credentialsJob = new GetCredentialsJob(m_accountStorageId, QStringLiteral("password"), QStringLiteral("password"), this);
             connect(credentialsJob, &GetCredentialsJob::finished, [this](KJob *job){
                 if (job->error()) {
                     qWarning() << "Credentials job error:" << job->errorText();
@@ -170,7 +169,7 @@ void XTelepathyPasswordAuthOperation::storeCredentials(const QString &secret)
 {
     QString username = m_account->parameters().value(QStringLiteral("account")).toString();
     Accounts::Manager *manager = KAccounts::accountsManager();
-    Accounts::Account *account = manager->account(m_kaccountsId);
+    Accounts::Account *account = manager->account(m_accountStorageId);
     SignOn::Identity *identity;
 
     if (account) {
@@ -220,17 +219,7 @@ void XTelepathyPasswordAuthOperation::storeCredentials(const QString &secret)
         account->sync();
 
         connect(account, &Accounts::Account::synced, [=]() {
-            m_kaccountsId = account->id();
-
-            QString uid = m_account->objectPath();
-
-            KSharedConfigPtr kaccountsConfig = KSharedConfig::openConfig(QStringLiteral("kaccounts-ktprc"));
-            KConfigGroup ktpKaccountsGroup = kaccountsConfig->group(QStringLiteral("ktp-kaccounts"));
-            ktpKaccountsGroup.writeEntry(uid, account->id());
-
-            KConfigGroup kaccountsKtpGroup = kaccountsConfig->group(QStringLiteral("kaccounts-ktp"));
-            kaccountsKtpGroup.writeEntry(QString::number(account->id()), uid);
-            kaccountsConfig->sync();
+            m_accountStorageId = account->id();
 
             qDebug() << "Account credentials synchronisation finished";
 

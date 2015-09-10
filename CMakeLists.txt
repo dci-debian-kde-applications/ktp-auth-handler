@@ -1,6 +1,10 @@
 project(ktp-auth-handler)
 
-set(KTP_AUTH_HANDLER_VERSION "15.04.2")
+# KDE Application Version, managed by release script
+set(KDE_APPLICATIONS_VERSION_MAJOR "15")
+set(KDE_APPLICATIONS_VERSION_MINOR "08")
+set(KDE_APPLICATIONS_VERSION_MICRO "0")
+set(KTP_AUTH_HANDLER_VERSION "${KDE_APPLICATIONS_VERSION_MAJOR}.${KDE_APPLICATIONS_VERSION_MINOR}.${KDE_APPLICATIONS_VERSION_MICRO}")
 
 cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
 
@@ -62,7 +66,6 @@ set(ktp_auth_handler_SRCS
     types.cpp
     x-telepathy-password-auth-operation.cpp
     x-telepathy-password-prompt.cpp
-    x-telepathy-sso-facebook-operation.cpp
     x-telepathy-sso-google-operation.cpp
     conference-auth-op.cpp
     conference-auth-observer.cpp
