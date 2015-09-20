@@ -12,11 +12,6 @@ Copyright: 2011 Collabora Ltd. <http://www.collabora.co.uk>
            2014 Martin Klapetek <mklapetek@kde.org>
 License: LGPL-2.1+
 
-Files: x-telepathy-sso-facebook-operation.cpp
-       x-telepathy-sso-facebook-operation.h
-Copyright: 2013  David Edmundson <kde@davidedmundson.co.uk>
-License: GPL-3+
-
 Files: kssl/*
 Copyright: 2007, 2008, 2010 Andreas Hartmetz <ahartmetz@gmail.com>
 	   2000-2005 George Staikos <staikos@kde.org>
