@@ -1,4 +1,4 @@
-ktp-auth-handler (15.08.1-1) UNRELEASED; urgency=medium
+ktp-auth-handler (15.08.2-1) UNRELEASED; urgency=medium
 
   * Apply homepage update patch from Matthew Cope
   * Update watch file to for KTp's move to applications.
@@ -17,7 +17,7 @@ ktp-auth-handler (15.08.1-1) UNRELEASED; urgency=medium
   * Update Diane Trout's email address.
   * Remove block in copyright file refering to removed files.
 
- -- Diane Trout <diane@debian.org>  Sat, 19 Sep 2015 16:47:36 -0700
+ -- Diane Trout <diane@debian.org>  Tue, 03 Nov 2015 22:08:38 -0800
 
 ktp-auth-handler (0.9.0-1) unstable; urgency=medium
 
