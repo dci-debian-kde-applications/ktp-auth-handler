@@ -2,7 +2,7 @@ ktp-auth-handler (15.08.2-1) UNRELEASED; urgency=medium
 
   * Apply homepage update patch from Matthew Cope
   * Update watch file to for KTp's move to applications.
-  * New upstream version.
+  * New upstream version. (Closes: #784488)
   * Update build-depends for the change to KF5.
     (Move to Qt5 versions and list specific kf5 modules).
   * Update copyright file. (Translations are in a new package).
