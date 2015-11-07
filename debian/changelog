@@ -14,7 +14,6 @@ ktp-auth-handler (15.08.2-1) UNRELEASED; urgency=medium
     - Update debian/rules
     - Update plugins path to qt5/plugins.
   * Add KDE's unstable download url to watch file
-  * Update Diane Trout's email address.
   * Remove block in copyright file refering to removed files.
 
  -- Diane Trout <diane@debian.org>  Tue, 03 Nov 2015 22:08:38 -0800
