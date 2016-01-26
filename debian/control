@@ -1,7 +1,7 @@
 Source: ktp-auth-handler
 Section: kde
 Priority: optional
-Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
+Maintainer: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Uploaders: Diane Trout <diane@ghic.org>,
            Michał Zając <quintasan@kubuntu.org>,
            Mark Purcell <msp@debian.org>
@@ -22,10 +22,11 @@ Build-Depends: cmake (>= 2.8.12~),
                libqtwebkit-dev,
                libsignon-qt5-dev (>= 8.55~),
                libtelepathy-qt5-dev (>= 0.8.9~),
+ libtelepathy-logger-qt-dev,
                pkg-kde-tools (>= 0.9),
                qtbase5-dev (>= 5.4)
 Standards-Version: 3.9.6
-Homepage: https://projects.kde.org/projects/extragear/network/telepathy/ktp-auth-handler
+Homepage: https://projects.kde.org/projects/kde/kdenetwork/ktp-auth-handler
 Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-extras/kde-telepathy/ktp-auth-handler.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/kde-telepathy/ktp-auth-handler.git
 
