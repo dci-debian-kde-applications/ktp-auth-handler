@@ -45,12 +45,3 @@ Description: KDE Telepathy authentication handler
  .
  This package is not meant to be used standalone. It is recommended
  to install the kde-telepathy metapackage instead.
-
-Package: kde-telepathy-auth-handler-dbg
-Architecture: any
-Section: debug
-Priority: extra
-Depends: kde-telepathy-auth-handler (= ${binary:Version}), ${misc:Depends}
-Description: KDE Telepathy authentication handler - debug symbols
- This package provides the debug symbols for the KDE Telepathy authentication
- handler module.
