@@ -1,6 +1,7 @@
 ktp-auth-handler (4:15.12.2-0ubuntu1) UNRELEASED; urgency=medium
 
   * New upstream bugfix release
+  * Bump libkaccounts-dev build depend version. 
 
  -- Scarlett Clark <sgclark@kubuntu.org>  Wed, 09 Mar 2016 22:09:40 -0800
 
