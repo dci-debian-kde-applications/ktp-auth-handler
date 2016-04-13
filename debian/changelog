@@ -1,3 +1,12 @@
+ktp-auth-handler (15.12.3-1~1.gbpa91364) UNRELEASED; urgency=medium
+
+  ** SNAPSHOT build @a913648df7c45a7146eebcc1c07b7b46fa2ca780 **
+
+  * Bump Standards-Version to 3.9.8
+  * Update build-deps and deps with the info from cmake
+
+ -- Automatic packaging <maxy+jenkins@gnuservers.com.ar>  Wed, 13 Apr 2016 11:36:00 +0200
+
 ktp-auth-handler (15.08.3-1) unstable; urgency=medium
 
   * New upstream release.
