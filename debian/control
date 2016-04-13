@@ -9,7 +9,7 @@ Build-Depends: cmake (>= 2.8.12~),
                debhelper (>= 9),
                extra-cmake-modules (>= 0.0.11~),
                kio-dev (>= 5.0~),
-               libaccounts-qt5-dev (>= 1.10~),
+               libaccounts-qt5-dev (>= 1.10),
                libkaccounts-dev,
                libkf5i18n-dev (>= 5.0~),
                libkf5wallet-dev (>= 5.0~),
@@ -22,10 +22,10 @@ Build-Depends: cmake (>= 2.8.12~),
                libqtwebkit-dev,
                libsignon-qt5-dev (>= 8.55~),
                libtelepathy-logger-qt-dev,
-               libtelepathy-qt5-dev (>= 0.8.9~),
+               libtelepathy-qt5-dev (>= 0.9.0),
                pkg-kde-tools (>= 0.9),
                qtbase5-dev (>= 5.4)
-Standards-Version: 3.9.6
+Standards-Version: 3.9.8
 Homepage: https://projects.kde.org/projects/kde/kdenetwork/ktp-auth-handler
 Vcs-Git: https://anonscm.debian.org/git/pkg-kde/applications/ktp-auth-handler.git
 Vcs-Browser: https://anonscm.debian.org/git/pkg-kde/applications/ktp-auth-handler.git
