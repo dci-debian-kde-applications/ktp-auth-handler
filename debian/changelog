@@ -1,6 +1,6 @@
-ktp-auth-handler (16.04.0-1~1.gbpa0ed7d) UNRELEASED; urgency=medium
+ktp-auth-handler (16.04.1-1~1.gbp91da28) UNRELEASED; urgency=medium
 
-  ** SNAPSHOT build @a0ed7d9ebc8e32c88c944c42697f4c471bcdc73b **
+  ** SNAPSHOT build @91da28b75b7c4f489a482d68dbe264a7b13896d1 **
 
   [ Automatic packaging ]
   ** SNAPSHOT build @a913648df7c45a7146eebcc1c07b7b46fa2ca780 **
@@ -9,6 +9,7 @@ ktp-auth-handler (16.04.0-1~1.gbpa0ed7d) UNRELEASED; urgency=medium
   * Update build-deps and deps with the info from cmake
   * upstream branch
   * Add a .gitattributes file to use dpkg-mergechangelogs
+  * UNRELEASED
 
   [ David Edmundson ]
   * Initial start of an SASL channel client
@@ -276,7 +277,7 @@ ktp-auth-handler (16.04.0-1~1.gbpa0ed7d) UNRELEASED; urgency=medium
   * GIT_SILENT Upgrade KDE Applications version to 15.12.2.
   * GIT_SILENT Upgrade KDE Applications version to 15.12.3.
 
- -- Automatic packaging <maxy+jenkins@gnuservers.com.ar>  Tue, 26 Apr 2016 16:13:04 +0200
+ -- Automatic packaging <jenkins@amadeus.gnuservers.com.ar>  Wed, 11 May 2016 00:35:15 +0200
 
 ktp-auth-handler (15.12.1-2) experimental; urgency=medium
 
