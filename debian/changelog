@@ -1,11 +1,12 @@
-ktp-auth-handler (16.08.0-1~1.gbp483abf) UNRELEASED; urgency=medium
+ktp-auth-handler (16.08.1-1~1.gbpc83fc7) UNRELEASED; urgency=medium
 
-  ** SNAPSHOT build @483abf716cd21f89831b5f47ec96be0fa94aec9c **
+  ** SNAPSHOT build @c83fc75be9b60674155df14adbf3bf9858a58718 **
 
   * UNRELEASED
   * UNRELEASED
+  * UNRELEASED
 
- -- Maximiliano Curia <jenkins@gnuservers.com.ar>  Fri, 19 Aug 2016 00:35:13 +0200
+ -- Maximiliano Curia <jenkins@gnuservers.com.ar>  Fri, 09 Sep 2016 00:35:35 +0200
 
 ktp-auth-handler (16.04.2-1) experimental; urgency=medium
 
