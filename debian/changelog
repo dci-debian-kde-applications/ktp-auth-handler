@@ -1,12 +1,17 @@
-ktp-auth-handler (16.08.1-1~1.gbpc83fc7) UNRELEASED; urgency=medium
+ktp-auth-handler (17.08.1-1~) UNRELEASED; urgency=medium
 
+  [ Maximiliano Curia ]
   ** SNAPSHOT build @c83fc75be9b60674155df14adbf3bf9858a58718 **
 
   * UNRELEASED
   * UNRELEASED
   * UNRELEASED
+  * New upstream release (17.08.1).
 
- -- Maximiliano Curia <jenkins@gnuservers.com.ar>  Fri, 09 Sep 2016 00:35:35 +0200
+  [ Automatic packaging ]
+  * Update changelog for 16.08.1-1~1.gbpc83fc7 release
+
+ -- Maximiliano Curia <maxy@debian.org>  Sun, 10 Sep 2017 19:37:04 +0200
 
 ktp-auth-handler (16.04.2-1) experimental; urgency=medium
 
