@@ -1,15 +1,6 @@
 ktp-auth-handler (17.08.1-1~) UNRELEASED; urgency=medium
 
-  [ Maximiliano Curia ]
-  ** SNAPSHOT build @c83fc75be9b60674155df14adbf3bf9858a58718 **
-
-  * UNRELEASED
-  * UNRELEASED
-  * UNRELEASED
   * New upstream release (17.08.1).
-
-  [ Automatic packaging ]
-  * Update changelog for 16.08.1-1~1.gbpc83fc7 release
 
  -- Maximiliano Curia <maxy@debian.org>  Sun, 10 Sep 2017 19:37:04 +0200
 
