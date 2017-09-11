@@ -35,6 +35,8 @@ Architecture: any
 Depends: kde-telepathy-data (>= ${source:Upstream-Version}),
          ${misc:Depends},
          ${shlibs:Depends},
+Breaks: ${kde-l10n:all}
+Replaces: ${kde-l10n:all}
 Recommends: kde-telepathy
 Suggests: libqca2-plugin-ossl
 Description: KDE Telepathy authentication handler
