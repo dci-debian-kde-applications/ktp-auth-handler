@@ -4,6 +4,10 @@ ktp-auth-handler (17.08.3-0r1) UNRELEASED; urgency=medium
   * New upstream release.
   * Bump Standards-Version to 4.1.1, no changes required.
   * Simplify watch file, and switch it to https.
+  * Stop forcing debian/tmp as local installation directory, installing
+    everything to the final location
+    - drop kde-telepathy-auth-handler.install, no more useful now
+    - no more need to invoke dh_install --fail-missing
 
  -- Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 03 Dec 2017 13:26:40 +0100
 

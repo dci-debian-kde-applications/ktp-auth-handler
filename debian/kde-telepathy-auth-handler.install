@@ -1,4 +1,0 @@
-usr/lib/*/libexec/ktp-auth-handler
-usr/share/dbus-1/services/org.freedesktop.Telepathy.Client.KTp.*.service
-usr/share/telepathy/clients/KTp.*.client
-usr/share/locale/
