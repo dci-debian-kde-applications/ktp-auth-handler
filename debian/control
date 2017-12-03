@@ -35,7 +35,7 @@ Depends: kde-telepathy-data (>= ${source:Upstream-Version}),
 Breaks: ${kde-l10n:all}
 Replaces: ${kde-l10n:all}
 Recommends: kde-telepathy
-Suggests: libqca2-plugin-ossl
+Suggests: libqca-qt5-2-plugins
 Description: KDE Telepathy authentication handler
  This package provides a Telepathy handler for the ServerAuthentication
  and ServerTLSConnection Telepathy channel types, which means that it
