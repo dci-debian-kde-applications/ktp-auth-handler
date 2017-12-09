@@ -15,6 +15,8 @@ ktp-auth-handler (17.08.3-0r1) UNRELEASED; urgency=medium
   * Remove unused build dependencies: libqca2-dev, libqjson-dev, and
     libqtwebkit-dev.
   * Replace the libqca2-plugin-ossl suggest with libqca-qt5-2-plugins.
+  * Adjust l10npkgs_firstversion_ok to the version where kde-l10n will
+    drop translations.
 
  -- Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 03 Dec 2017 13:26:40 +0100
 
