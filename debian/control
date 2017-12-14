@@ -30,12 +30,12 @@ Vcs-Browser: https://anonscm.debian.org/git/pkg-kde/applications/ktp-auth-handle
 Package: kde-telepathy-auth-handler
 Architecture: any
 Depends: kde-telepathy-data (>= ${source:Upstream-Version}),
+         libqca-qt5-2-plugins,
          ${misc:Depends},
          ${shlibs:Depends},
 Breaks: ${kde-l10n:all}
 Replaces: ${kde-l10n:all}
 Recommends: kde-telepathy
-Suggests: libqca-qt5-2-plugins
 Description: KDE Telepathy authentication handler
  This package provides a Telepathy handler for the ServerAuthentication
  and ServerTLSConnection Telepathy channel types, which means that it
