@@ -3,6 +3,7 @@ ktp-auth-handler (17.08.3-2) UNRELEASED; urgency=medium
   [ Pino Toscano ]
   * Raise the libqca-qt5-2-plugins suggest to a dependency, as also indicated
     by upstream.
+  * Bump Standards-Version to 4.1.3, no changes required.
 
  -- Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 14 Dec 2017 19:38:16 +0100
 
